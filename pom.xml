@@ -35,8 +35,10 @@
 							<output>${project.basedir}/target/external/</output>
 							<apiPackage>org.openapitools.virtualan.api</apiPackage>
 							<modelPackage>org.openapitools.virtualan.to</modelPackage>
-							<virtualService>true</virtualService>
 							<generatorName>spring</generatorName>
+							<configOptions>
+                                <virtualService>true</virtualService>
+                            </configOptions>
 						</configuration>
 					</execution>
 				</executions>
