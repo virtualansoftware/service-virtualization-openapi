@@ -16,8 +16,10 @@ Step 2) Add the following entry for each Interface Spec/Yaml and need to be a Mo
 			<output>${project.basedir}/target/external/</output>
 			<apiPackage>org.openapitools.virtualan.api</apiPackage>
 			<modelPackage>org.openapitools.virtualan.to</modelPackage>
-			<virtualService>true</virtualService>
 			<generatorName>spring</generatorName>
+			<configOptions>	
+				<virtualService>true</virtualService>
+            </configOptions>
 		</configuration>
 	
 Step 3) 
