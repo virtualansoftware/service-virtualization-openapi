@@ -1,4 +1,4 @@
-Step 1) Create the Application.properties with following information:
+Step 1) Create the Application.properties with following information in the "src/main/resources" directory:
 
 springfox.documentation.swagger.v2.path=/api-docs
 server.port=8080
@@ -9,20 +9,18 @@ virtual.datasource.jdbcurl=jdbc:hsqldb:mem:dataSource
 virtual.datasource.username=sa
 virtual.datasource.password=
 
-Step 1) Create the Application.properties with following information:
-	Download the pom.xml from the following location:
-		1)  Add the following entry for each Yaml you would like to set up Mock/Virtulized service
-					 <configuration>
-							<inputSpec>${project.basedir}/src/main/resources/external/petstore.yaml</inputSpec>
-							<output>${project.basedir}/target/external/</output>
-							<apiPackage>org.openapitools.virtualan.api</apiPackage>
-							<modelPackage>org.openapitools.virtualan.to</modelPackage>
-							<virtualService>true</virtualService>
-							<generatorName>spring</generatorName>
-						</configuration>
-		2) Build and deploy. 
-		
+Step 2) Add the following entry for each Interface Spec/Yaml and need to be a Mock/Virtulized service 
+
+		<configuration>
+			<inputSpec>${project.basedir}/src/main/resources/external/petstore.yaml</inputSpec>
+			<output>${project.basedir}/target/external/</output>
+			<apiPackage>org.openapitools.virtualan.api</apiPackage>
+			<modelPackage>org.openapitools.virtualan.to</modelPackage>
+			<virtualService>true</virtualService>
+			<generatorName>spring</generatorName>
+		</configuration>
+	
 Step 3) 
-	Your service is ready :)
+	Build and deploy. Your virtualized service is ready :)
 
 Step 4) Navigate to the http://localhost:8080/virtualan-ui.html and check the service
