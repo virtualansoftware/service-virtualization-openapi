@@ -25,8 +25,8 @@ public class PetStepDefinition extends PetApiTest {
 	private RequestSpecification request;
 	VirtualServiceRequest virtualServiceRequest = null;
 	
-	private String PET_BY_ID = "http://localhost/v3/pets/{id}";
-	private String PET_URL = "http://localhost/v3/pets";
+	private String PET_BY_ID = "http://localhost/api/pets/{id}";
+	private String PET_URL = "http://localhost/api/pets";
 	private String VIRTUAL_SERVICE = "http://localhost/virtualservices";
 
 	@Given("a pet exists with an id of (.*)")
