@@ -1,13 +1,9 @@
 Step 1) Create the Application.properties with following information in the "src/main/resources" directory:
 
-springfox.documentation.swagger.v2.path=/api-docs
-server.port=8080
-spring.jackson.date-format=org.openapitools.RFC3339DateFormat
-spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS=false
-virtual.datasource.driver-class-name=org.hsqldb.jdbcDriver
-virtual.datasource.jdbcurl=jdbc:hsqldb:mem:dataSource
-virtual.datasource.username=sa
-virtual.datasource.password=
+virtualan.datasource.driver-class-name=org.hsqldb.jdbcDriver
+virtualan.datasource.jdbcurl=jdbc:hsqldb:mem:dataSource
+virtualan.datasource.username=sa
+virtualan.datasource.password=
 
 Step 2) Add the following entry for each Interface Spec/Yaml and need to be a Mock/Virtulized service 
 
