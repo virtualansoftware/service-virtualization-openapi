@@ -1,3 +1,21 @@
+*Prerequisites:* (If you have already done set up JDK and Maven - skip this step)
+- JDK(Mandatory) -  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+    - JDK Installation:(Refer following Video and Article
+    	- https://www.youtube.com/watch?v=r0jN33ZOmWM 
+		- https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html (till step 4)
+     - JAVA_HOME set up(Mandatory) :
+     	- http://roufid.com/no-compiler-is-provided-in-this-environment/
+- Apache Maven(Mandatory)  - https://maven.apache.org
+     - Apache Maven: (Refer following Video and Article)
+     	- https://www.youtube.com/watch?v=3ODSQ0EpoQI
+		- https://www.mkyong.com/maven/how-to-install-maven-in-windows/-
+- GIT (optional)
+     - GIT Setup(Optional): (Refer following Video and Article)
+     	- https://www.youtube.com/watch?v=albr1o7Z1nw
+		- https://www.codecademy.com/articles/git-setup
+
+*initial Set up your project for the Swagger Specification* :
+
 *Step 1)* Create the Application.properties with following information in the "src/main/resources" directory:
 
      > virtualan.datasource.driver-class-name=org.hsqldb.jdbcDriver
@@ -5,32 +23,47 @@
      > virtualan.datasource.username=sa
      > virtualan.datasource.password=
 
-*Step 2)* Add the following entry for each Interface Spec/Yaml and need to be a Mock/Virtulized service 
-
+*Step 2)* Add the following entry for each Interface Spec/Yaml  to be set up as mock service:
+    - to setuppetstore.yaml need to add following entry in the pom.xml. refer the pom.xml for reference
+	<execution>
+		<id>pet-service-vs-api</id>
+		<goals>
+			<goal>generate</goal>
+		</goals>
 		<configuration>
 			<inputSpec>${project.basedir}/src/main/resources/external/petstore.yaml</inputSpec>
 			<output>${project.basedir}/target/external/</output>
 			<apiPackage>org.openapitools.virtualan.api</apiPackage>
 			<modelPackage>org.openapitools.virtualan.to</modelPackage>
 			<generatorName>spring</generatorName>
-			<configOptions>	
-				<virtualService>true</virtualService>
-            </configOptions>
+			<configOptions>
+                                <virtualService>true</virtualService>
+                        </configOptions>
 		</configuration>
+	</execution>
 	
-*Step 3)* 
-	Build and deploy. 
-	         Your virtualized service is ready :)
 
-*Step 4)* 
-      Navigate to the http://localhost:8080/virtualan-ui.html and check the service
+*Navigate to root directory of the folder where pom.xml was present*:
 
-*Step 5)* 
-     To set up mock data:
+- Build:
 
-- Using Virtualan-UI:       
-	https://github.com/elan-venture/virtualan/wiki/Test-Data-Set-up-using-Virtualan
+         - mvn clean install  
+	 
+	 - If you have any proxy issue use this command:  mvn -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 clean install 
+                  
+- Run using standalone JAR:
+	
+	- java -jar target/virtualan-pet.jar         
 
-- Using Virtualan-Rest service:
-	https://github.com/elan-venture/virtualan/blob/master/test/virtualan-test-data/src/main/resources/features/pet/pet.feature
-	https://github.com/elan-venture/virtualan/tree/master/samples/virtualan-openapi-spring-mapping/src/test/java/io/virtualan/test
+- To set up mock data:
+      
+      - Using Virtualan-UI:       
+      	https://github.com/elan-venture/virtualan/wiki/Test-Data-Set-up-using-Virtualan
+      
+      - Using Virtualan-Rest service:
+      	https://github.com/elan-venture/virtualan/blob/master/test/virtualan-test-data/src/main/resources/features/pet/pet.feature
+	  	https://github.com/elan-venture/virtualan/tree/master/samples/virtualan-openapi-spring-mapping/src/test/java/io/virtualan/test
+
+- Invoke Virtualan UI:  			
+	- Navigate to http://localhost:8080/virtualan-ui.html 
+	- More details about the user interface refer: https://github.com/elan-venture/virtualan/wiki 
