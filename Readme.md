@@ -1,4 +1,4 @@
-*Prerequisites:* (If you have already done set up JDK and Maven - skip this step)
+*I. Prerequisites:* (If you have already done set up JDK and Maven - skip this step)
 - JDK(Mandatory) -  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
     - JDK Installation:(Refer following Video and Article
     	- https://www.youtube.com/watch?v=r0jN33ZOmWM 
@@ -14,16 +14,17 @@
      	- https://www.youtube.com/watch?v=albr1o7Z1nw
 		- https://www.codecademy.com/articles/git-setup
 
-*initial Set up your project for the Swagger Specification* :
 
-*Step 1)* Create the Application.properties with following information in the "src/main/resources" directory:
+*II. Initial Set up your project for the Swagger Specification* :
+
+- Create the Application.properties with following information in the "src/main/resources" directory:
 
      > virtualan.datasource.driver-class-name=org.hsqldb.jdbcDriver
      > virtualan.datasource.jdbcurl=jdbc:hsqldb:mem:dataSource
      > virtualan.datasource.username=sa
      > virtualan.datasource.password=
 
-*Step 2)* Add the following entry for each Interface Spec/Yaml  to be set up as mock service:
+- Add the following entry for each Interface Spec/Yaml  to be set up as mock service:
     - to setuppetstore.yaml need to add following entry in the pom.xml. refer the pom.xml for reference
 	<execution>
 		<id>pet-service-vs-api</id>
@@ -43,7 +44,8 @@
 	</execution>
 	
 
-*Navigate to root directory of the folder where pom.xml was present*:
+
+*III. Navigate to root directory of the folder where pom.xml was present*:
 
 - Build:
 
