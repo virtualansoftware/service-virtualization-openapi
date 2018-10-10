@@ -8,7 +8,7 @@
 - Apache Maven(Mandatory)  - https://maven.apache.org
      - Apache Maven: (Refer following Video and Article)
      	- https://www.youtube.com/watch?v=3ODSQ0EpoQI
-		- https://www.mkyong.com/maven/how-to-install-maven-in-windows/-
+		- https://www.mkyong.com/maven/how-to-install-maven-in-windows/
 - GIT (optional)
      - GIT Setup(Optional): (Refer following Video and Article)
      	- https://www.youtube.com/watch?v=albr1o7Z1nw
