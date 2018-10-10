@@ -25,7 +25,9 @@
      > virtualan.datasource.password=
 
 - Add the following entry for each Interface Spec/Yaml  to be set up as mock service:
-    - to setuppetstore.yaml need to add following entry in the pom.xml. refer the pom.xml for reference
+	- to setuppetstore.yaml need to add following entry in the pom.xml. refer the pom.xml for reference
+	
+	```html
 	<execution>
 		<id>pet-service-vs-api</id>
 		<goals>
@@ -42,8 +44,7 @@
                         </configOptions>
 		</configuration>
 	</execution>
-	
-
+	```
 
 *III. Navigate to root directory of the folder where pom.xml was present*:
 
