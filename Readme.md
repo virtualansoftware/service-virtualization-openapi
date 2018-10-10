@@ -21,6 +21,7 @@
 	It always provides a choice to choose your data base and configure(spring-jpa). Need to provide data base information in the Application.properties in the "src/main/resources" directory of your spring boot application: This would requires if you don't want to loose the existing mock data because as you redeploy the code the data would be lost.
 
 In memory DB: (Eveny restart you lose the old data)
+	
 	- virtualan.datasource.driver-class-name=org.hsqldb.jdbcDriver
 	- virtualan.datasource.jdbcurl=jdbc:hsqldb:mem:dataSource
 	- virtualan.datasource.username=sa
