@@ -37,7 +37,7 @@
 			<goal>generate</goal>
 		</goals>
 		<configuration>
-			<inputSpec>${project.basedir}/src/main/resources/external/petstore.yaml</inputSpec>
+			<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/PetStore/petstore.yaml</inputSpec>
 			<output>${project.basedir}/target/external/</output>
 			<apiPackage>org.openapitools.virtualan.api</apiPackage>
 			<modelPackage>org.openapitools.virtualan.to</modelPackage>
