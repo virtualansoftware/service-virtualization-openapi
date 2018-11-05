@@ -5,7 +5,7 @@
 	<artifactId>Virtualized-pet-Service</artifactId>
 	<packaging>jar</packaging>
 	<name>Virtualized Service Pet Sample</name>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<properties>
 		<virtualan.version>1.2.2</virtualan.version>
 		<cucumber.version>1.2.5</cucumber.version>
