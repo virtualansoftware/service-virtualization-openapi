@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.virtualan</groupId>
-	<artifactId>Virtualized-pet-Service</artifactId>
+	<artifactId>Open-API-Mock-Service</artifactId>
 	<packaging>jar</packaging>
-	<name>Virtualized Service Pet Sample</name>
+	<name>Open API Mock Service</name>
 	<version>1.1.0</version>
 	<properties>
 		<virtualan.version>1.2.2</virtualan.version>
@@ -33,15 +33,31 @@
 			<plugin>
 				<groupId>org.openapitools</groupId>
 				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.3.2</version>
 				<executions>
+					<execution>
+						<id>uber-service-vs-api</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Uber/uber.yaml</inputSpec>
+							<output>${project.basedir}/target/external/</output>
+							<apiPackage>org.openapitools.virtualan.api</apiPackage>
+							<modelPackage>org.openapitools.virtualan.to</modelPackage>
+							<generatorName>spring</generatorName>
+							<configOptions>
+                                <virtualService>true</virtualService>
+                            </configOptions>
+						</configuration>
+					</execution>
 					<execution>
 						<id>pet-service-vs-api</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/external/petstore.yaml</inputSpec>
+							<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/PetStore/petstore.yaml</inputSpec>
 							<output>${project.basedir}/target/external/</output>
 							<apiPackage>org.openapitools.virtualan.api</apiPackage>
 							<modelPackage>org.openapitools.virtualan.to</modelPackage>
