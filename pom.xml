@@ -7,7 +7,7 @@
 	<name>Open API Mock Service</name>
 	<version>1.1.0</version>
 	<properties>
-		<virtualan.version>1.2.2</virtualan.version>
+		<virtualan.version>1.2.6</virtualan.version>
 		<cucumber.version>1.2.5</cucumber.version>
 	</properties>
 	<parent>
