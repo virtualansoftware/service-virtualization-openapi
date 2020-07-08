@@ -64,12 +64,12 @@
 - To set up mock data:
       
       - Using Virtualan-UI:       
-      	https://github.com/elan-venture/virtualan/wiki/Test-Data-Set-up-using-Virtualan
+      	https://github.com/virtualansoftware/virtualan/wiki/Test-Data-Set-up-using-Virtualan
       
       - Using Virtualan-Rest service:
-      	https://github.com/elan-venture/virtualan/blob/master/test/virtualan-test-data/src/main/resources/features/pet/pet.feature
-	  	https://github.com/elan-venture/virtualan/tree/master/samples/virtualan-openapi-spring-mapping/src/test/java/io/virtualan/test
-
+        https://github.com/virtualansoftware/virtualan-openapi-demo/blob/master/src/test/resources/features/pet/pet.feature
+	https://github.com/virtualansoftware/virtualan/blob/master/modules/virtualan-plugin/src/main/resources/virtualservices.yaml
+	
 - Invoke Virtualan UI:  			
 	- Navigate to http://localhost:8080/virtualan-ui.html 
 	- More details about the user interface refer: https://github.com/virtualansoftware/virtualan/wiki 
