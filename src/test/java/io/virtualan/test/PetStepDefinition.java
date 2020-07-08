@@ -25,9 +25,9 @@ public class PetStepDefinition extends PetApiTest {
 	private RequestSpecification request;
 	VirtualServiceRequest virtualServiceRequest = null;
 	
-	private String PET_BY_ID = "http://localhost/api/pets/{id}";
-	private String PET_URL = "http://localhost/api/pets";
-	private String VIRTUAL_SERVICE = "http://localhost/virtualservices";
+	private String PET_BY_ID = "http://localhost:80/api/pets/{id}";
+	private String PET_URL = "http://localhost:80/api/pets";
+	private String VIRTUAL_SERVICE = "http://localhost:80/virtualservices";
 
 	@Given("a pet exists with an id of (.*)")
 	public void petExistsById(int id) {
@@ -98,6 +98,8 @@ public class PetStepDefinition extends PetApiTest {
 		virtualServiceRequest.setOutput(virtualServiceRequestInfo.get("output"));
 		virtualServiceRequest.setOperationId(virtualServiceRequestInfo.get("operationId"));
 		virtualServiceRequest.setUrl(virtualServiceRequestInfo.get("url"));
+		virtualServiceRequest.setType(virtualServiceRequestInfo.get("type"));
+		
 	}
 	
 	@And ("set available parameters for the following given input$")
