@@ -161,3 +161,75 @@ Feature: Test Pet API
     And verify response includes following in the response
       | id		| 130     	   |
       | name		| GoldFish-PUT |
+
+  Scenario: Setup a mock service for sample with GET API
+    Given set Pet Mock data for the following given input
+      | url					| /sample/validate/{sampleId} |
+      | output              |  { "id": 1, "sample1": "one","sample2": "two","sample3": "three"}                      |
+      | httpStatusCode	    |   200              |
+      | method              |   GET             |
+    And set available parameters for the following given input
+      | key       | value  | type|
+      | sampleId | 1       | java.lang.String |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
+
+  Scenario: Setup a mock service for sample with GET API
+    Given set Pet Mock data for the following given input
+      | url					| /sample/validate/{sampleId} |
+      | output              |  { "id": 2, "sample1": "one","sample2": "two","sample3": "three"}                      |
+      | httpStatusCode	    |   200              |
+      | method              |   GET             |
+    And set available parameters for the following given input
+      | key       | value  | type|
+      | sampleId | 2       | java.lang.String |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
+  Scenario: Setup a mock service for sample with GET API
+    Given set Pet Mock data for the following given input
+      | url					| /sample/validate/{sampleId} |
+      | output              |  { "id": 3, "sample1": "one","sample2": "two","sample3": "three"}                      |
+      | httpStatusCode	    |   200              |
+      | method              |   GET             |
+    And set available parameters for the following given input
+      | key       | value  | type|
+      | sampleId | 3       | java.lang.String |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
+  Scenario: Setup a mock service for sample with GET API
+    Given set Pet Mock data for the following given input
+      | url					| /sample/validate/{sampleId} |
+      | output              |  { "id": 4, "sample1": "one","sample2": "two","sample3": "three"}                      |
+      | httpStatusCode	    |   200              |
+      | method              |   GET             |
+    And set available parameters for the following given input
+      | key       | value  | type|
+      | sampleId | 4       | java.lang.String |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
+  Scenario: Setup a mock service for sample with GET API
+    Given set Pet Mock data for the following given input
+      | url					| /sample/validate/{sampleId} |
+      | output              |  { "id": 5, "sample1": "one","sample2": "two","sample3": "three"}                      |
+      | httpStatusCode	    |   200              |
+      | method              |   GET             |
+    And set available parameters for the following given input
+      | key       | value  | type|
+      | sampleId | 5       | java.lang.String |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
