@@ -240,7 +240,7 @@ Feature: Test Pet API
     Then verify the status code is 200
     And verify risk response with 70 includes in the response
 
-  Scenario: User check if high risk level for the give dateOfbirth and zipcode
+  Scenario: User check if low risk level for the give dateOfbirth and zipcode
     Given create a risk with given input
       | input                 | {   "birthday" : "2013-02-02",   "postalCode" : "60563" }|
     When a user POST the risk with id
