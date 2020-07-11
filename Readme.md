@@ -69,8 +69,8 @@
       - Using Virtualan-UI:       
       	https://github.com/virtualansoftware/virtualan/wiki/Test-Data-Set-up-using-Virtualan
       
-      - Using Virtualan-Rest service:
-        https://github.com/virtualansoftware/virtualan-openapi-demo/blob/master/src/test/resources/features/pet/pet.feature
+      - Using Virtualan-Rest service: for automation usecases
+        https://github.com/virtualansoftware/virtualan-openapi-demo/blob/master/src/test/resources/features/demo/demo.feature
 	https://github.com/virtualansoftware/virtualan/blob/master/modules/virtualan-plugin/src/main/resources/virtualservices.yaml
 	
 - Invoke Virtualan UI:  			
