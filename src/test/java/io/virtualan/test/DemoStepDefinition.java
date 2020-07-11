@@ -4,6 +4,7 @@ package io.virtualan.test;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import cucumber.api.DataTable;
@@ -18,7 +19,7 @@ import io.virtualan.model.VirtualServiceKeyValue;
 import io.virtualan.model.VirtualServiceRequest;
 
 
-public class PetStepDefinition extends PetApiTest {
+public class DemoStepDefinition extends DemoApiTest {
 
 	private Response response;
 	private ValidatableResponse json;
@@ -29,14 +30,24 @@ public class PetStepDefinition extends PetApiTest {
 	private String PET_URL = "http://localhost:80/api/pets";
 	private String VIRTUAL_SERVICE = "http://localhost:80/virtualservices";
 
-	@Given("a pet exists with an id of (.*)")
-	public void petExistsById(int id) {
+	Map<String, String>  urlMap = loadUrl();
+
+	public Map loadUrl() {
+		Map<String, String>  urlMapBuild = new HashMap();
+		urlMapBuild.put("pet", "http://localhost:80/api/pets");
+		urlMapBuild.put("risk", "http://localhost:80/v1/riskfactor/compute");
+		urlMapBuild.put("petId", "http://localhost:80/api/pets/{id}");
+		return urlMapBuild;
+	}
+
+	@Given("a (.*) exists with an id of (.*)")
+	public void petExistsById(String resource, int id) {
 		request = given().port(80).pathParam("id", id);
 	}
 
-	@When("a user GET the pet by id")
-	public void retrievesById() {
-		response = request.when().accept("application/json").get(PET_BY_ID);
+	@When("a user GET the (.*) by id")
+	public void retrievesById(String serviceUrl) {
+		response = request.when().accept("application/json").get(urlMap.get(serviceUrl));
 	}
 	
 	@Given("update a pet with given a pet id (\\d+) with input$")
@@ -45,25 +56,25 @@ public class PetStepDefinition extends PetApiTest {
 		request = given().contentType("application/json").port(80).pathParam("id", petId).body(json);
 	}
 	
-	@Given("create a pet with given input$")
-	public void createPetData(Map<String, String> petMap)  {
+	@Given("create a (.*) with given input$")
+	public void createPetData(String resource, Map<String, String> petMap)  {
 		String json = petMap.get("input");
 		request = given().contentType("application/json").port(80).body(json);
 	}
 	
-	@When("a user POST the pet with id")
-	public void createPetById() {
-		response = request.when().accept("application/json").post(PET_URL);
+	@When("a user POST the (.*) with id")
+	public void createServiceById(String serviceUrl) {
+		response = request.when().accept("application/json").post(urlMap.get(serviceUrl));
 	}
 	
-	@When("a user PUT the pet with id")
-	public void updatePetById() {
-		response = request.when().accept("application/json").put(PET_BY_ID);
+	@When("a user PUT the (.*) with id")
+	public void updatePetById(String serviceUrl) {
+		response = request.when().accept("application/json").put(urlMap.get(serviceUrl));
 	}
 	
-	@When("a user DELETE the pet by id")
-	public void deleteById() {
-		response = request.when().accept("application/json").delete(PET_BY_ID);
+	@When("a user DELETE the (.*) by id")
+	public void deleteById(String serviceUrl) {
+		response = request.when().accept("application/json").delete(urlMap.get(serviceUrl));
 	}
 
 	@Then("verify the status code is (\\d+)")
@@ -79,6 +90,11 @@ public class PetStepDefinition extends PetApiTest {
     		assertEquals(v, mockStatus.get(k));
     	});
     }
+
+	@And("^verify (.*) response with (.*) includes in the response$")
+	public void mockSingleResponse(String resource, String context) throws Throwable {
+			assertEquals(context, json.extract().body().asString());
+	}
 	
 	@And("^verify response includes following in the response$")
 	public void verfiyResponse(DataTable data) throws Throwable {
