@@ -76,3 +76,7 @@
 - Invoke Virtualan UI:  			
 	- Navigate to http://localhost:8080/virtualan-ui.html 
 	- More details about the user interface refer: https://github.com/virtualansoftware/virtualan/wiki 
+
+
+
+https://api.travis-ci.com/virtualansoftware/virtualan-openapi-demo.svg?branch=master
