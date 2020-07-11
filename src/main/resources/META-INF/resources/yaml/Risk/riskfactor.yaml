@@ -10,7 +10,7 @@ info:
   license:
     name: No license
 servers:
-  - url: live.virtualandemo.com/api
+  - url: /api
 paths:
   /riskfactor/compute:
     post:
