@@ -1,11 +1,18 @@
 openapi: "3.0.0"
 info:
-  version: 1.0.0
-  title: riskfactor
+  version: 0.0.2
+  title: XXXX Sample specification
+  description: Sample API
+  contact:
+    name: Test User
+    url: http://api.localhost
+    email: abcd.xyz-xxxxxx@xxxx.ac
   license:
-    name: MIT
-servers:
-  - url: http://riskfactor.io/v1
+    name: No license
+schemes:
+  - https
+host: live.virtualandemo.com
+basePath: /api
 paths:
   /riskfactor/compute:
     post:

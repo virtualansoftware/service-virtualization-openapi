@@ -10,7 +10,7 @@ info:
   license:
     name: No license
 servers:
-  - url: http://xxxx.ac/v1
+  - url: live.virtualandemo.com/api
 paths:
   /sample:
     post:
