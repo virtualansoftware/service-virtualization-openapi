@@ -8,7 +8,7 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID']
   # Deploy an image from Container Registry to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'virtualan-demo', '--image', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+  args: ['run', 'deploy', 'virtualan-demo', '--image', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID', '--region', 'us-central1', "--port", "8081", '--platform', 'managed', '--allow-unauthenticated']
   # Deploy on-demand-domain
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'domain-mapping', 'create', '--service', 'virtualan-demo', '--domain', 'demo.virtualandemo.com']
