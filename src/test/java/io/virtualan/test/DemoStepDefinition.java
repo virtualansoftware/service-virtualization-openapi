@@ -26,17 +26,17 @@ public class DemoStepDefinition extends DemoApiTest {
 	private RequestSpecification request;
 	VirtualServiceRequest virtualServiceRequest = null;
 	
-	private String PET_BY_ID = "http://localhost:80/api/pets/{id}";
-	private String PET_URL = "http://localhost:80/api/pets";
-	private String VIRTUAL_SERVICE = "http://localhost:80/virtualservices";
+	private String PET_BY_ID = "http://localhost:8080/api/pets/{id}";
+	private String PET_URL = "http://localhost:8080/api/pets";
+	private String VIRTUAL_SERVICE = "http://localhost:8080/virtualservices";
 
 	Map<String, String>  urlMap = loadUrl();
 
 	public Map loadUrl() {
 		Map<String, String>  urlMapBuild = new HashMap();
-		urlMapBuild.put("pet", "http://localhost:80/api/pets");
-		urlMapBuild.put("risk", "http://localhost:80/v1/riskfactor/compute");
-		urlMapBuild.put("petId", "http://localhost:80/api/pets/{id}");
+		urlMapBuild.put("pet", "http://localhost:8080/api/pets");
+		urlMapBuild.put("risk", "http://localhost:8080/v1/riskfactor/compute");
+		urlMapBuild.put("petId", "http://localhost:8080/api/pets/{id}");
 		return urlMapBuild;
 	}
 
