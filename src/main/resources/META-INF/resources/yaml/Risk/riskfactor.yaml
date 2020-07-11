@@ -4,8 +4,10 @@ info:
   title: riskfactor
   license:
     name: MIT
-servers:
-  - url: http://riskfactor.io/v1
+schemes:
+  - https
+host: live.virtualandemo.com
+basePath: /api
 paths:
   /riskfactor/compute:
     post:
