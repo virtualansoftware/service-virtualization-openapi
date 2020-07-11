@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/mvn'
-  args: ['clean','install']
-#  args: ['clean','install', '-Dmaven.test.skip=true']
+#  args: ['clean','install']
+   args: ['clean','install', '-Dmaven.test.skip=true']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID', '.']
   timeout: 180s
