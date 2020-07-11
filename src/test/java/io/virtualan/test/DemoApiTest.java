@@ -8,6 +8,6 @@ import org.openapitools.OpenAPI2SpringBoot;
 @SpringBootConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = {OpenAPI2SpringBoot.class})
-public class PetApiTest {
+public class DemoApiTest {
     
 }

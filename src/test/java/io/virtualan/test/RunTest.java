@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"}, glue = {"io.virtualan.test"},
-        features = {"classpath:features/pet"})
+        features = {"classpath:features/demo"})
 public class RunTest {
 
 }
