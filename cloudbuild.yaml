@@ -8,10 +8,10 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID']
   # Deploy an image from Container Registry to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'virtualan-ve', '--image', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID', '--region', 'us-central1', "--max-instances", "5", "--memory", "1Gi" ,"--port", "8080", '--platform', 'managed', '--allow-unauthenticated']
+  args: ['run', 'deploy', 'virtualan-demo', '--image', 'gcr.io/$PROJECT_ID/virtualan-mock:1.0.$BUILD_ID', '--region', 'us-central1', "--max-instances", "5", "--memory", "1Gi" ,"--port", "8080", '--platform', 'managed', '--allow-unauthenticated']
   # Deploy on-demand-domain
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'domain-mappings', 'create', '--service', 'virtualan-ve', '--domain', 've.virtualandemo.com', '--region', 'us-central1', '--platform', 'managed']
+  args: ['beta', 'run', 'domain-mappings', 'create', '--service', 'virtualan-demo', '--domain', 'live.virtualandemo.com', '--region', 'us-central1', '--platform', 'managed']
 #- name: 'gcr.io/cloud-builders/kubectl'
 #  args:
 #  - set
