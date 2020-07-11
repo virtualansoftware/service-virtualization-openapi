@@ -9,10 +9,8 @@ info:
     email: abcd.xyz-xxxxxx@xxxx.ac
   license:
     name: No license
-schemes:
-  - https
-host: live.virtualandemo.com
-basePath: /api
+servers:
+  - url: live.virtualandemo.com/api
 paths:
   /riskfactor/compute:
     post:
