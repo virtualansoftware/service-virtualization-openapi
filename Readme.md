@@ -64,14 +64,19 @@
 	
 	- java -jar target/virtualan-pet.jar         
 
-- To set up mock data:
+- To set up  data:
       
       - Using Virtualan-UI:       
       	https://github.com/virtualansoftware/virtualan/wiki/Test-Data-Set-up-using-Virtualan
       
+      - open API Contract: 
+        https://github.com/virtualansoftware/virtualan/blob/master/modules/virtualan-plugin/src/main/resources/virtualservices.yaml
+	
+    
       - Using Virtualan-Rest service: for automation usecases
         https://github.com/virtualansoftware/virtualan-openapi-demo/blob/master/src/test/resources/features/demo/demo.feature
-	https://github.com/virtualansoftware/virtualan/blob/master/modules/virtualan-plugin/src/main/resources/virtualservices.yaml
+	
+	
 	
 - Invoke Virtualan UI:  			
 	- Navigate to http://localhost:8080/virtualan-ui.html 
