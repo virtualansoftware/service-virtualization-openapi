@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: virtualan-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /mock
+        backend:
+          serviceName: mock-svc
+          servicePort: 80
