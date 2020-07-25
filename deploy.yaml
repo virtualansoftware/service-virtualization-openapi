@@ -15,8 +15,19 @@ spec:
         env: dev
     spec:
       containers:
-      - name: virtualan
-        image: "gcr.io/virtualan-demo/virtualan-mock:1.0"
+        - name: virtualan
+          image: "gcr.io/erudite-scarab-284417/virtualan-mock:1.0"
+          volumeMounts:
+            - name: config
+              mountPath: "/config"
+              readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: virtualan-cmap
+            items:
+            - key: "application.properties"
+              path: "application.properties"
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -41,7 +52,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 8080
     protocol: TCP
     name: http
   selector:
