@@ -9,3 +9,6 @@ steps:
   # Deploy an image from Container Registry to Cloud Run
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', 'deploy.yaml' ]
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=virtualan-demo'
