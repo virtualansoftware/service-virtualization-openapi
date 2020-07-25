@@ -11,4 +11,4 @@ steps:
   args: ['apply', '-f', 'deploy.yaml' ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=virtualan-demo'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
