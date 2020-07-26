@@ -37,6 +37,7 @@
 				<groupId>org.openapitools</groupId>
 				<artifactId>openapi-generator-maven-plugin</artifactId>
 				<version>4.3.1</version>
+				<executions>
 				<execution>
 					<id>Person-service-vs-api</id>
 					<goals>
