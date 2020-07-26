@@ -37,38 +37,21 @@
 				<groupId>org.openapitools</groupId>
 				<artifactId>openapi-generator-maven-plugin</artifactId>
 				<version>4.3.1</version>
-				<executions>
-					<execution>
-						<id>uber-service-vs-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Uber/uber.yaml</inputSpec>
-							<output>${project.basedir}/target/external/</output>
-							<apiPackage>org.openapitools.virtualan.api</apiPackage>
-							<modelPackage>org.openapitools.virtualan.to</modelPackage>
-							<generatorName>spring</generatorName>
-							<configOptions>
-                                <virtualService>true</virtualService>
-                            </configOptions>
-						</configuration>
-					</execution>
-					<execution>
-						<id>Person-service-vs-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Person/person.yaml</inputSpec>
-							<output>${project.basedir}/target/external/</output>
-							<apiPackage>org.openapitools.virtualan.api</apiPackage>
-							<modelPackage>org.openapitools.virtualan.to</modelPackage>
-							<generatorName>spring</generatorName>
-							<configOptions>
-								<virtualService>true</virtualService>
-							</configOptions>
-						</configuration>
+				<execution>
+					<id>Person-service-vs-api</id>
+					<goals>
+						<goal>generate</goal>
+					</goals>
+					<configuration>
+						<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Person/person.yaml</inputSpec>
+						<output>${project.basedir}/target/external/</output>
+						<apiPackage>org.openapitools.virtualan.api</apiPackage>
+						<modelPackage>org.openapitools.virtualan.to</modelPackage>
+						<generatorName>spring</generatorName>
+						<configOptions>
+							<virtualService>true</virtualService>
+						</configOptions>
+					</configuration>
 					</execution>
 					<execution>
 						<id>risk-service-vs-api</id>
@@ -99,24 +82,8 @@
 							<modelPackage>org.openapitools.virtualan.to</modelPackage>
 							<generatorName>spring</generatorName>
 							<configOptions>
-                                <virtualService>true</virtualService>
-                            </configOptions>
-						</configuration>
-					</execution>
-						<execution>
-						<id>sample-validate-vs-api</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Service/Service.yaml</inputSpec>
-							<output>${project.basedir}/target/external/</output>
-							<apiPackage>org.openapitools.virtualan.api</apiPackage>
-							<modelPackage>org.openapitools.virtualan.to</modelPackage>
-							<generatorName>spring</generatorName>
-							<configOptions>
-								<virtualService>true</virtualService>
-							</configOptions>
+                                			<virtualService>true</virtualService>
+                            				</configOptions>
 						</configuration>
 					</execution>
 				</executions>
