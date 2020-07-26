@@ -37,7 +37,8 @@
 				<groupId>org.openapitools</groupId>
 				<artifactId>openapi-generator-maven-plugin</artifactId>
 				<version>4.3.1</version>
-				<execution>
+				<executions>
+				      <execution>
 					<id>Person-service-vs-api</id>
 					<goals>
 						<goal>generate</goal>
@@ -51,7 +52,7 @@
 						<configOptions>
 							<virtualService>true</virtualService>
 						</configOptions>
-					</configuration>
+					 </configuration>
 					</execution>
 					<execution>
 						<id>risk-service-vs-api</id>
