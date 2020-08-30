@@ -12,6 +12,110 @@
     "resource": "pets"
   },
   {
+    "httpStatusCode": "400",
+    "url": "/pets/{petId}",
+    "type": "Rule",
+    "requestType": "REST",
+    "method": "GET",
+    "rule": "parameters['petId'] == 0",
+    "output": { "code": "PET_1000",  "message": "Pet identifier is not valid"},
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "100"
+	  }
+    ],
+    "contentType": "JSON"
+},
+  {
+    "operationId": "addPet",
+    "httpStatusCode": "200",
+    "url": "/pets",
+    "type": "Response",
+    "requestType": "REST",
+    "method": "POST",
+    "input": {
+      "category": {
+        "id": 10,
+        "name": "string"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "string"
+      ],
+      "status": "available",
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ]
+    },
+    "output": {
+      "category": {
+        "id": 10,
+        "name": "string"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "string"
+      ],
+      "status": "available",
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ]
+    },
+    "resource": "pets",
+    "contentType": "JSON"
+  },
+  {
+    "operationId": "addPet",
+    "httpStatusCode": "200",
+    "url": "/pets",
+    "type": "Response",
+    "requestType": "REST",
+    "method": "POST",
+    "input": {
+      "category": {
+        "id": 100,
+        "name": "string"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "string"
+      ],
+      "status": "available",
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ]
+    },
+    "output": {
+      "category": {
+        "id": 10,
+        "name": "string"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "string"
+      ],
+      "status": "available",
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ]
+    },
+    "resource": "pets",
+    "contentType": "JSON"
+  },
+  {
     "operationId": "addPet",
     "httpStatusCode": "400",
     "url": "/pets",
