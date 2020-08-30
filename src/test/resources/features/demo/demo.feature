@@ -4,7 +4,7 @@ Feature: Test Pet API
     When a user GET the petId by id
     Then verify the status code is 500
     And verify response includes following in the response
-      | code			| MOCK_DATA_NOT_SET     |
+      | code			| MISSING_MOCK_DATA     |
       | message		| Mock Response was not defined for the given input	    |
 
   Scenario: Setup a mock service for Pet with POST call with "Mock Request Body" validation failure
