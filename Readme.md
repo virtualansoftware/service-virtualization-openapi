@@ -60,9 +60,9 @@
 	 
 	 - If you have any proxy issue use this command:  mvn -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2 clean install 
                   
-- Run using standalone JAR:
+- Run using standalone JAR: (Better memory performance use given paramters)
 	
-	- java -jar target/virtualan-pet.jar         
+	- java _**-XX:+UseSerialGC -Xss512k -XX:MaxRAM=512m**_ -jar target/virtualan-demo.jar         
 
 - To set up  data:
       
