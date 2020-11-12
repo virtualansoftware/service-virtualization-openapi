@@ -19,7 +19,7 @@
 		<testng-version>6.14.3</testng-version>
 	</properties>
 	<build>
-		<finalName>virtualan-demo</finalName>
+		<finalName>virtualan-rests-demo</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
