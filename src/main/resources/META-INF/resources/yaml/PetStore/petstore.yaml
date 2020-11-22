@@ -578,6 +578,9 @@ definitions:
       name:
         type: string
         example: doggie
+      type:
+        type: string
+        example: 'DOGS'
       photoUrls:
         type: array
         xml:
