@@ -1,4 +1,4 @@
-FROM openjdk:16-ea-23-jdk-oraclelinux8
+FROM adoptopenjdk/openjdk8:alpine-slim
 
 ADD target/virtualan-rests-demo.jar /openapi/virtualan/virtualan-demo.jar
 
