@@ -16,7 +16,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
     "id": 2,
@@ -45,7 +45,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000",
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000",
     "contentType": "JSON"
   },
   {
@@ -97,7 +97,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000",
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000",
     "contentType": "JSON"
   },
   {
@@ -149,7 +149,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000",
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000",
     "contentType": "JSON"
   },
   {
@@ -169,7 +169,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
     "id": 6,
@@ -188,7 +188,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "riskfactor",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
     "id": 7,
@@ -207,7 +207,7 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
     "id": 8,
@@ -234,10 +234,10 @@
     "headerParams": [],
     "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:16:15.409+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 16,
+    "id": 9,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -251,11 +251,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:32:55.370+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 17,
+    "id": 10,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -269,11 +270,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:33:53.713+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 18,
+    "id": 11,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -287,11 +289,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:34:45.648+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 19,
+    "id": 12,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -305,11 +308,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:35:19.548+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 20,
+    "id": 13,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -323,11 +327,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:35:45.695+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 21,
+    "id": 14,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -341,11 +346,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:36:19.427+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.305+0000"
   },
   {
-    "id": 22,
+    "id": 15,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -359,11 +365,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:36:46.446+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.306+0000"
   },
   {
-    "id": 23,
+    "id": 16,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -377,11 +384,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:37:13.542+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.310+0000"
   },
   {
-    "id": 24,
+    "id": 17,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -395,11 +403,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:37:30.826+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 25,
+    "id": 18,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -413,17 +422,18 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:38:04.991+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 26,
+    "id": 19,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
     "type": "Params",
     "requestType": "REST",
-    "usageCount": 37,
+    "usageCount": 0,
     "priority": 0,
     "method": "POST",
     "input": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
@@ -431,11 +441,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:54:48.005+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 27,
+    "id": 20,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -449,11 +460,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:50:30.463+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 28,
+    "id": 21,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -467,11 +479,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:50:38.487+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 29,
+    "id": 22,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -485,11 +498,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:07.925+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 30,
+    "id": 23,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -503,11 +517,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:13.950+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 31,
+    "id": 24,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -521,11 +536,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:20.029+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 32,
+    "id": 25,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -539,11 +555,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:26.066+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 33,
+    "id": 26,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -557,11 +574,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:32.209+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 34,
+    "id": 27,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -575,11 +593,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:37.702+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 35,
+    "id": 28,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -593,11 +612,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:46.308+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 36,
+    "id": 29,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -611,11 +631,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:50.548+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 37,
+    "id": 30,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -629,11 +650,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:51:54.776+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 38,
+    "id": 31,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -647,11 +669,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:00.111+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 39,
+    "id": 32,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -665,11 +688,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:05.673+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 40,
+    "id": 33,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -683,11 +707,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:10.419+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 41,
+    "id": 34,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -701,11 +726,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:14.957+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 42,
+    "id": 35,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -719,11 +745,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:20.256+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 43,
+    "id": 36,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -737,11 +764,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:26.083+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 44,
+    "id": 37,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -755,11 +783,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:52:33.275+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.311+0000"
   },
   {
-    "id": 45,
+    "id": 38,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -773,11 +802,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:04.109+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 46,
+    "id": 39,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -791,11 +821,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:14.530+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 47,
+    "id": 40,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -809,11 +840,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:20.678+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 48,
+    "id": 41,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -827,11 +859,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:27.467+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 49,
+    "id": 42,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -845,11 +878,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:31.710+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 50,
+    "id": 43,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -863,11 +897,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:53:35.757+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 51,
+    "id": 44,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -881,11 +916,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:54:20.726+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 52,
+    "id": 45,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -899,11 +935,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:54:26.875+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 53,
+    "id": 46,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -917,11 +954,12 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:54:30.110+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 54,
+    "id": 47,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
@@ -935,17 +973,18 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:54:33.002+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 55,
+    "id": 48,
     "operationId": "personsPost",
     "httpStatusCode": "201",
     "url": "/persons",
     "type": "Params",
     "requestType": "REST",
-    "usageCount": 8,
+    "usageCount": 0,
     "priority": 0,
     "method": "POST",
     "input": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
@@ -953,36 +992,41 @@
     "output": "{\n  \"dateOfBirth\": \"1985-12-12\",\n  \"firstName\": \"<firstName>\",\n  \"lastName\": \"<lastName>\",\n  \"spokenLanguages\": {\n    \"additionalProp1\": \"Tam\",\n    \"additionalProp2\": \"Eng\"\n  },\n  \"username\": \"<username>\"\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "persons",
-    "lastUsedDateTime": "2020-11-15T16:55:40.930+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 2,
+    "id": 49,
     "operationId": "addPet",
     "httpStatusCode": "201",
     "url": "/pets",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 1,
+    "usageCount": 0,
     "priority": 0,
     "method": "POST",
     "input": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"German Shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"German Shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T02:00:07.778+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 4,
+    "id": 50,
     "operationId": "getPetById",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 6,
+    "usageCount": 0,
     "priority": 0,
     "method": "GET",
+    "input": "",
+    "rule": "",
     "output": "{\n  \"category\": {\n    \"id\": 100,\n    \"name\": \"german shepherd\"\n  },\n  \"id\": 101,\n  \"name\": \"Rocky\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 101,\n      \"name\": \"brown\"\n    }\n  ]\n}",
     "availableParams": [
       {
@@ -994,19 +1038,22 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:29:55.323+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 5,
+    "id": 51,
     "operationId": "getPetById",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 6,
+    "usageCount": 0,
     "priority": 0,
     "method": "GET",
+    "input": "",
+    "rule": "",
     "output": "{\n  \"category\": {\n    \"id\": 200,\n    \"name\": \"Bulldog\"\n  },\n  \"id\": 201,\n  \"name\": \"Butch\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 201,\n      \"name\": \"grey\"\n    }\n  ]\n}",
     "availableParams": [
       {
@@ -1018,19 +1065,23 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:31:27.432+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 6,
+    "id": 52,
     "operationId": "deletePet",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 1,
+    "usageCount": 0,
     "priority": 0,
     "method": "DELETE",
+    "input": "",
+    "rule": "",
+    "output": "",
     "availableParams": [
       {
         "key": "petId",
@@ -1041,19 +1092,23 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T02:18:02.550+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 7,
+    "id": 53,
     "operationId": "deletePet",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 4,
+    "usageCount": 0,
     "priority": 0,
     "method": "DELETE",
+    "input": "",
+    "rule": "",
+    "output": "",
     "availableParams": [
       {
         "key": "petId",
@@ -1064,37 +1119,41 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:40:48.196+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 8,
+    "id": 54,
     "operationId": "addPet",
     "httpStatusCode": "201",
     "url": "/pets",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 1,
+    "usageCount": 0,
     "priority": 0,
     "method": "POST",
     "input": "{\n    \"category\": {\n        \"id\": 200,\n        \"name\": \"Bulldog\"\n    },\n    \"id\": 201,\n    \"name\": \"Butch\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 201,\n            \"name\": \"grey\"\n        }\n    ]\n}",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 200,\n        \"name\": \"Bulldog\"\n    },\n    \"id\": 201,\n    \"name\": \"Butch\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 201,\n            \"name\": \"grey\"\n        }\n    ]\n}",
     "availableParams": [],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T02:20:26.061+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 12,
+    "id": 55,
     "operationId": "updatePet",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 3,
+    "usageCount": 0,
     "priority": 0,
     "method": "PUT",
     "input": "{\n    \"category\": {\n        \"id\": 200,\n        \"name\": \"Bulldog\"\n    },\n    \"id\": 201,\n    \"name\": \"Butch\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 201,\n            \"name\": \"white gray\"\n        }\n    ]\n}",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 200,\n        \"name\": \"Bulldog\"\n    },\n    \"id\": 201,\n    \"name\": \"Butch\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 201,\n            \"name\": \"white gray\"\n        }\n    ]\n}",
     "availableParams": [
       {
@@ -1106,20 +1165,22 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T02:35:02.439+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 13,
+    "id": 56,
     "operationId": "updatePet",
     "httpStatusCode": "200",
     "url": "/pets/{petId}",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 2,
+    "usageCount": 0,
     "priority": 0,
     "method": "PUT",
     "input": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"german shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"german shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
     "availableParams": [
       {
@@ -1131,19 +1192,22 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T02:33:23.529+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 14,
+    "id": 57,
     "operationId": "findPetsByTags",
     "httpStatusCode": "200",
     "url": "/pets/findByTags",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 2,
+    "usageCount": 0,
     "priority": 0,
     "method": "GET",
+    "input": "",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"german shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
     "availableParams": [
       {
@@ -1155,19 +1219,22 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:36:26.932+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 15,
+    "id": 58,
     "operationId": "findPetsByTags",
     "httpStatusCode": "200",
     "url": "/pets/findByTags",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 3,
+    "usageCount": 0,
     "priority": 0,
     "method": "GET",
+    "input": "",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 200,\n        \"name\": \"Bulldog\"\n    },\n    \"id\": 201,\n    \"name\": \"Butch\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 201,\n            \"name\": \"grey\"\n        }\n    ]\n}",
     "availableParams": [
       {
@@ -1179,19 +1246,22 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:39:58.678+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
   },
   {
-    "id": 16,
+    "id": 59,
     "operationId": "findPetsByStatus",
     "httpStatusCode": "200",
     "url": "/pets/findByStatus",
     "type": "Response",
     "requestType": "REST",
-    "usageCount": 2,
+    "usageCount": 0,
     "priority": 0,
     "method": "GET",
+    "input": "",
+    "rule": "",
     "output": "{\n    \"category\": {\n        \"id\": 100,\n        \"name\": \"german shepherd\"\n    },\n    \"id\": 101,\n    \"name\": \"Rocky\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"status\": \"available\",\n    \"tags\": [\n        {\n            \"id\": 101,\n            \"name\": \"brown\"\n        }\n    ]\n}",
     "availableParams": [
       {
@@ -1203,7 +1273,121 @@
       }
     ],
     "headerParams": [],
+    "excludeList": "",
     "resource": "pets",
-    "lastUsedDateTime": "2020-12-14T03:38:44.452+0000"
+    "lastUsedDateTime": "2021-04-04T20:57:00.312+0000"
+  },
+  {
+    "id": 60,
+    "operationId": "addPet",
+    "httpStatusCode": "201",
+    "url": "/pets",
+    "type": "Params",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "POST",
+    "input": "{\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"id\": <petId>,\n  \"name\": \"<petName>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"type\": \"DOGS\"\n}",
+    "rule": "[{\"petId\":\"1000\",\"petName\":\"Test1\"},{\"petId\":\"2000\",\"petName\":\"Test2\"}]",
+    "output": "{\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"id\": <petId>,\n  \"name\": \"<petName>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"type\": \"DOGS\"\n}",
+    "availableParams": [],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-04T20:58:02.014+0000"
+  },
+  {
+    "id": 61,
+    "operationId": "updatePet",
+    "httpStatusCode": "200",
+    "url": "/pets/{petId}",
+    "type": "PARAMS",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "PUT",
+    "input": "{\n  \"category\": {\n    \"id\": 100,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "rule": "[     {         \"petId\": \"702\", \"id\": \"90017\",         \"name\": \"None-PUT\"     },     {         \"petId\": \"6007\",\"id\": \"6007\",         \"name\": \"Sugar-PUT\"     } ]",
+    "output": "{\n  \"category\": {\n    \"id\": <id>,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "<petId>",
+        "type": null,
+        "serviceType": null,
+        "parameterType": null
+      }
+    ],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-04T21:21:28.918+0000"
+  },
+  {
+    "id": 62,
+    "operationId": "addPet",
+    "httpStatusCode": "200",
+    "url": "/pets",
+    "type": "PARAMS",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "POST",
+    "input": "{\n  \"category\": {\n    \"id\": 100,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "rule": "[   { \"id\":\"1001\", \"name\":\"doggie\"     } ]",
+    "output": "{\n  \"category\": {\n    \"id\": <id>,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "availableParams": [],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-04T21:21:39.272+0000"
+  },
+  {
+    "id": 63,
+    "operationId": "updatePet",
+    "httpStatusCode": "200",
+    "url": "/pets/{petId}",
+    "type": "PARAMS",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "PUT",
+    "input": "{\n  \"category\": {\n    \"id\": 100,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "rule": "[     {         \"petId\": \"600\", \"id\": \"600\",         \"name\": \"None-PUT\"     },     {         \"petId\": \"601\",\"id\": \"601\",         \"name\": \"Sugar-PUT\"     } ]",
+    "output": "{\n  \"category\": {\n    \"id\": <id>,\n    \"name\": \"string\"\n  },\n  \"id\": <id>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "<petId>",
+        "type": null,
+        "serviceType": null,
+        "parameterType": null
+      }
+    ],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-04T21:21:43.207+0000"
+  },
+  {
+    "id": 64,
+    "operationId": "getPetById",
+    "httpStatusCode": "200",
+    "url": "/pets/{petId}",
+    "type": "Params",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "GET",
+    "rule": "[{\"petId\":\"10000\",\"name\":\"Doggie\"}]",
+    "output": "{\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"id\": <petId>,\n  \"name\": \"<name>\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "<petId>",
+        "type": null,
+        "serviceType": null,
+        "parameterType": null
+      }
+    ],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-04T21:21:50.062+0000"
   }
 ]
