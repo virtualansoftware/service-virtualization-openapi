@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.virtualan</groupId>
-	<artifactId>Open-API-Mock-Service</artifactId>
+	<artifactId>Service-Virtualization-Open-Api</artifactId>
 	<packaging>jar</packaging>
-	<name>Open API Mock Service</name>
+	<name>Service-Virtualization-Open-Api</name>
 	<version>1.1.0</version>
 	<properties>
 		<java.version>1.8</java.version>
@@ -19,7 +19,7 @@
 		<testng-version>6.14.3</testng-version>
 	</properties>
 	<build>
-		<finalName>virtualan-rests-demo</finalName>
+		<finalName>sv-virtualan-rest-demo</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
@@ -192,7 +192,6 @@
 			</dependency>
 			<!-- END Virtual Service API support -->
 
-			<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 			<dependency>
 				<groupId>javax.validation</groupId>
 				<artifactId>validation-api</artifactId>
