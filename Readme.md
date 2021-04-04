@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/virtualansoftware/virtualan-openapi-demo.svg?branch=master)](https://travis-ci.com/virtualansoftware/virtualan-openapi-demo)
 
 
 *I. Prerequisites:* (If you have already done set up JDK and Maven - skip this step)
