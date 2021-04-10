@@ -76,6 +76,11 @@ public class DemoStepDefinition extends DemoApiTest {
 		response = request.when().accept("application/json").put(urlMap.get(serviceUrl));
 	}
 
+	@When("a user PATCH the (.*) with id")
+	public void patchPetById(String serviceUrl) {
+		response = request.when().accept("application/json").patch(urlMap.get(serviceUrl));
+	}
+
 	@When("a user DELETE the (.*) by id")
 	public void deleteById(String serviceUrl) {
 		response = request.when().accept("application/json").delete(urlMap.get(serviceUrl));

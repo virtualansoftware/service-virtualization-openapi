@@ -1389,5 +1389,27 @@
     "headerParams": [],
     "resource": "pets",
     "lastUsedDateTime": "2021-04-04T21:21:50.062+0000"
+  },
+  {
+    "id": 65,
+    "operationId": "patchPet",
+    "httpStatusCode": "200",
+    "url": "/pets/{petId}",
+    "type": "Response",
+    "requestType": "REST",
+    "usageCount": 1,
+    "priority": 0,
+    "method": "PATCH",
+    "input": "{\n  \"category\": {\n    \"id\": 231,\n    \"name\": \"patch\"\n  },\n  \"id\": 231,\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"patch.jpg\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 231,\n      \"name\": \"patch\"\n    }\n  ]\n}",
+    "output": "{\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"id\": 231,\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"patch.jpg\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 231,\n      \"name\": \"patch\"\n    }\n  ]\n}",
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "231"
+      }
+    ],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2021-04-09T23:52:26.326+0000"
   }
 ]

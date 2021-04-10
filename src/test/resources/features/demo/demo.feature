@@ -152,7 +152,6 @@ Feature: Test Pet API
     Then verify the status code is 201
     And verify mock response with "mockStatus" includes following in the response
       | code | Mock created successfully |
-
   Scenario: User calls service to PUT and create Pet
     Given update a pet with given a pet id 130 with input
       | input | {   "category": {     "id": 130,     "name": "Fish-PUT"   },   "id": 130,   "name": "GoldFish-PUT",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 130,       "name": "Fish-PUT"     }   ] }  |
@@ -161,6 +160,31 @@ Feature: Test Pet API
     And verify response includes following in the response
       | id		| 130     	   |
       | name		| GoldFish-PUT |
+
+  Scenario: Setup a mock service for  Pet with PUT API
+    Given set Pet Mock data for the following given input
+      | url					| /pets/230	             |
+      | input                 | {   "category": {     "id": 230,     "name": "Fish-PATCH"   },   "id": 230,   "name": "GoldFish-PATCH",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 230,       "name": "Fish-PATCH"     }   ] }  |
+      | output                | {   "category": {     "id": 230,     "name": "Fish-PATCH"   },   "id": 230,   "name": "GoldFish-PATCH",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 230,       "name": "Fish-PATCH"     }   ] }  |
+      | httpStatusCode	    |   200              |
+      | method                |   PATCH           |
+      | type                  |   Response        |
+    And set available parameters for the following given input
+      | key   | value | type|
+      | petId |230    | java.lang.Long |
+    When tester create the mock data for Pet
+    Then verify the status code is 201
+    And verify mock response with "mockStatus" includes following in the response
+      | code | Mock created successfully |
+
+  Scenario: User calls service to PATCH and create Pet
+    Given update a pet with given a pet id 230 with input
+      | input | {   "category": {     "id": 230,     "name": "Fish-PATCH"   },   "id": 230,   "name": "GoldFish-PATCH",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 230,       "name": "Fish-PATCH"     }   ] }  |
+    When a user PATCH the petId with id
+    Then verify the status code is 200
+    And verify response includes following in the response
+      | id		| 230     	   |
+      | name		| GoldFish-PATCH |
 
   Scenario: Setup a mock service for sample with GET API
     Given set Pet Mock data for the following given input
