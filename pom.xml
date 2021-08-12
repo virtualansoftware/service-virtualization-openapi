@@ -1,26 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.virtualan</groupId>
-  <artifactId>Service-Virtualization-Open-Api</artifactId>
+  <artifactId>virtualan-openapi-rest-demo</artifactId>
   <packaging>jar</packaging>
-  <name>Service-Virtualization-Open-Api</name>
-  <version>1.1.0</version>
+  <name>virtualan-openapi-rest-demo</name>
+  <version>1.0.3-SNAPSHOT</version>
+  <description>Virtualan Rest virtualization and rest - Demo</description>
   <properties>
+    <cucumblan.version>1.3.6</cucumblan.version>
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <virtualan.version>2.2.3</virtualan.version>
-    <cucumber.version>1.2.5</cucumber.version>
-    <hsqldb.version>2.3.2</hsqldb.version>
-    <spring.boot.version>2.5.2</spring.boot.version>
+    <cucumber.version>6.10.4</cucumber.version>
+    <hsqldb.version>2.5.0</hsqldb.version>
+    <spring.boot.version>2.5.1</spring.boot.version>
     <springfox.version>2.9.2</springfox.version>
-    <groovy.version>2.4.7</groovy.version>
-    <testng-version>6.14.3</testng-version>
   </properties>
   <build>
-    <finalName>sv-virtualan-rest-demo</finalName>
+    <finalName>virtualan-rest-demo</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
@@ -40,32 +38,12 @@
         <version>5.1.0</version>
         <executions>
           <execution>
-            <id>uber-service-vs-api</id>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-            <configuration>
-              <inputSpec>
-                ${project.basedir}/src/main/resources/META-INF/resources/yaml/Uber/uber.yaml
-              </inputSpec>
-              <output>${project.basedir}/target/external/</output>
-              <apiPackage>org.openapitools.virtualan.api</apiPackage>
-              <modelPackage>org.openapitools.virtualan.to</modelPackage>
-              <generatorName>spring</generatorName>
-              <configOptions>
-                <virtualService>true</virtualService>
-              </configOptions>
-            </configuration>
-          </execution>
-          <execution>
             <id>Person-service-vs-api</id>
             <goals>
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>
-                ${project.basedir}/src/main/resources/META-INF/resources/yaml/Person/person.yaml
-              </inputSpec>
+              <inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Person/person.yaml</inputSpec>
               <output>${project.basedir}/target/external/</output>
               <apiPackage>org.openapitools.virtualan.api</apiPackage>
               <modelPackage>org.openapitools.virtualan.to</modelPackage>
@@ -81,9 +59,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>
-                ${project.basedir}/src/main/resources/META-INF/resources/yaml/Risk/riskfactor.yaml
-              </inputSpec>
+              <inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Risk/riskfactor.yaml</inputSpec>
               <output>${project.basedir}/target/external/</output>
               <apiPackage>org.openapitools.virtualan.api</apiPackage>
               <modelPackage>org.openapitools.virtualan.to</modelPackage>
@@ -100,9 +76,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <inputSpec>
-                ${project.basedir}/src/main/resources/META-INF/resources/yaml/PetStore/petstore.yaml
-              </inputSpec>
+              <inputSpec>${project.basedir}/src/main/resources/META-INF/resources/yaml/Pet/petstore.yaml</inputSpec>
               <output>${project.basedir}/target/external/</output>
               <apiPackage>org.openapitools.virtualan.api</apiPackage>
               <modelPackage>org.openapitools.virtualan.to</modelPackage>
@@ -112,22 +86,25 @@
               </configOptions>
             </configuration>
           </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4.1</version>
+        <executions>
           <execution>
-            <id>sample-validate-vs-api</id>
             <goals>
-              <goal>generate</goal>
+              <goal>enforce</goal>
             </goals>
             <configuration>
-              <inputSpec>
-                ${project.basedir}/src/main/resources/META-INF/resources/yaml/Service/Service.yaml
-              </inputSpec>
-              <output>${project.basedir}/target/external/</output>
-              <apiPackage>org.openapitools.virtualan.api</apiPackage>
-              <modelPackage>org.openapitools.virtualan.to</modelPackage>
-              <generatorName>spring</generatorName>
-              <configOptions>
-                <virtualService>true</virtualService>
-              </configOptions>
+              <rules>
+                <bannedDependencies>
+                  <excludes>
+                    <exclude>com.vaadin.external.google:android-json</exclude>
+                  </excludes>
+                </bannedDependencies>
+              </rules>
             </configuration>
           </execution>
         </executions>
@@ -151,8 +128,39 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <testFailureIgnore>true</testFailureIgnore>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>net.masterthought</groupId>
+        <artifactId>maven-cucumber-reporting</artifactId>
+        <version>5.3.0</version>
+        <executions>
+          <execution>
+            <id>execution</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <projectName>Virtualan-OpenApi-Rest</projectName>
+              <skip>false</skip>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
+              <jsonFiles>
+                <param>**/*.json</param>
+              </jsonFiles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+
 
   <dependencies>
     <dependency>
@@ -165,13 +173,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <version>${spring.boot.version}</version>
+      <scope>test</scope>
       <exclusions>
         <exclusion>
-          <groupId>org.skyscreamer</groupId>
-          <artifactId>jsonassert</artifactId>
+          <groupId>com.vaadin.external.google</groupId>
+          <artifactId>android-json</artifactId>
         </exclusion>
       </exclusions>
-      <scope>test</scope>
     </dependency>
 
     <dependency>
@@ -201,36 +209,25 @@
       <artifactId>validation-api</artifactId>
       <version>2.0.1.Final</version>
     </dependency>
-
-
-    <!-- Setup BDD Test cases -->
-
     <dependency>
-      <groupId>io.rest-assured</groupId>
-      <artifactId>rest-assured</artifactId>
-      <version>3.0.0</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-java8</artifactId>
-      <version>${cucumber.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>info.cukes</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>${cucumber.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>info.cukes</groupId>
+      <groupId>io.cucumber</groupId>
       <artifactId>cucumber-spring</artifactId>
       <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
-</project>
 
+    <dependency>
+      <groupId>io.virtualan</groupId>
+      <artifactId>cucumblan-api</artifactId>
+      <version>${cucumblan.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.masterthought</groupId>
+      <artifactId>cucumber-reporting</artifactId>
+      <version>5.5.4</version>
+    </dependency>
+
+  </dependencies>
+
+</project>
