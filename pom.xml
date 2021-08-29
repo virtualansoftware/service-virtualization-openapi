@@ -18,7 +18,7 @@
     <springfox.version>2.9.2</springfox.version>
   </properties>
   <build>
-    <finalName>virtualan-rest-demo</finalName>
+    <finalName>sv-virtualan-rest-demo</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
@@ -134,29 +134,6 @@
         <configuration>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>net.masterthought</groupId>
-        <artifactId>maven-cucumber-reporting</artifactId>
-        <version>5.3.0</version>
-        <executions>
-          <execution>
-            <id>execution</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-            <configuration>
-              <projectName>Virtualan-OpenApi-Rest</projectName>
-              <skip>false</skip>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <inputDirectory>${project.build.directory}/jsonReports</inputDirectory>
-              <jsonFiles>
-                <param>**/*.json</param>
-              </jsonFiles>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
