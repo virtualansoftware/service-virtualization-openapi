@@ -2,13 +2,17 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.virtualan/virtualan-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.virtualan%22%20AND%20a:%22virtualan-plugin%22)  [![Build Status](https://travis-ci.com/virtualansoftware/service-virtualization-openapi.svg?branch=master)](https://travis-ci.com/virtualansoftware/service-virtualization-openapi)
 
-Virtualan is an open source-based Open API Interface driven, Kafka, AMQ and MQTT Service virtualization product. It supports #OpenAPI, #AsyncAPI test development. This supports #shiftleft testing.
+> Virtualan is an open source-based Open API Interface driven, Kafka, AMQ and MQTT Service virtualization product. It supports #OpenAPI, #AsyncAPI test development. This supports #shiftleft testing.
 
-Product page: https://www.linkedin.com/products/virtualan-software-virtualan/
-Tutorials:  https://tutorials.virtualan.io/#/Virtualan
-Example:  https://github.com/virtualansoftware/service-virtualization-openapi
-Video:  https://www.youtube.com/watch?v=otTjbPxT0W8 
-Docker Image:  https://hub.docker.com/r/virtualan/service-virtualization  
+**Product page:** https://www.linkedin.com/products/virtualan-software-virtualan/
+
+**Tutorials:**  https://tutorials.virtualan.io/#/Virtualan
+
+**Example:**  https://github.com/virtualansoftware/service-virtualization-openapi
+
+**Video:**  https://www.youtube.com/watch?v=otTjbPxT0W8 
+
+**Docker Image:**  https://hub.docker.com/r/virtualan/service-virtualization  
 
 
 
