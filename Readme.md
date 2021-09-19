@@ -1,20 +1,15 @@
+<h1 align="center" > Virtualan </h1>
+
 [![Maven Central](https://img.shields.io/maven-central/v/io.virtualan/virtualan-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.virtualan%22%20AND%20a:%22virtualan-plugin%22)  [![Build Status](https://travis-ci.com/virtualansoftware/service-virtualization-openapi.svg?branch=master)](https://travis-ci.com/virtualansoftware/service-virtualization-openapi)
 
-*I. Prerequisites:* (If you have already done set up JDK and Maven - skip this step)
-- JDK(Mandatory) -  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-    - JDK Installation:(Refer following Video and Article
-    	- https://www.youtube.com/watch?v=r0jN33ZOmWM 
-		- https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html (till step 4)
-     - JAVA_HOME set up(Mandatory) :
-     	- http://roufid.com/no-compiler-is-provided-in-this-environment/
-- Apache Maven(Mandatory)  - https://maven.apache.org
-     - Apache Maven: (Refer following Video and Article)
-     	- https://www.youtube.com/watch?v=3ODSQ0EpoQI
-		- https://www.mkyong.com/maven/how-to-install-maven-in-windows/
-- GIT (optional)
-     - GIT Setup(Optional): (Refer following Video and Article)
-     	- https://www.youtube.com/watch?v=albr1o7Z1nw
-		- https://www.codecademy.com/articles/git-setup
+Virtualan is an open source-based Open API Interface driven, Kafka, AMQ and MQTT Service virtualization product. It supports #OpenAPI, #AsyncAPI test development. This supports #shiftleft testing.
+
+Product page: https://www.linkedin.com/products/virtualan-software-virtualan/
+Tutorials:  https://tutorials.virtualan.io/#/Virtualan
+Example:  https://github.com/virtualansoftware/service-virtualization-openapi
+Video:  https://www.youtube.com/watch?v=otTjbPxT0W8 
+Docker Image:  https://hub.docker.com/r/virtualan/service-virtualization  
+
 
 
 *II. Initial Set up your project for the Swagger Specification* :
