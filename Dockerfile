@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8:alpine-slim
+FROM adoptopenjdk/openjdk11:alpine-slim
 
 ADD target/sv-virtualan-rest-demo.jar /openapi/virtualan/virtualan-demo.jar
 
