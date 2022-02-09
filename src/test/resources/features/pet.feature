@@ -1,12 +1,14 @@
 Feature: Test Pet API
 
-  Scenario: User calls service to READ a pet by its id
-    Given pet with an path param petId of 1000
-    When a user get application/json in pets_petId resource on pet
-    Then Verify the status code is 500
-    And Verify across response includes following in the response
-      | code    | MISSING_MOCK_DATA                                   |
-      | message | Mock response was not added for the given parameter |
+#  Scenario: User calls service to READ a pet by its id
+#    Given pet with an path param petId of 1000
+#    And add content type with given header params
+#      | contentType | application/json |
+#    When a user get application/json in pets_petId resource on pet
+#    Then Verify the status code is 500
+#    And Verify across response includes following in the response
+#      | code    | MISSING_MOCK_DATA                                   |
+#      | message | Mock response was not added for the given parameter |
 
   Scenario: Setup a mock service for Pet with CREATE call with "Mock Request Body" validation failure
     Given Create Pet Mock data for the with given input
@@ -17,6 +19,8 @@ Feature: Test Pet API
       | input          | INVALID_INPUT |
       | output         | ERROR         |
       | method         | POST          |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 400
     And Verify across response includes following in the response
@@ -31,6 +35,8 @@ Feature: Test Pet API
       | input          | {   "category": {     "id": 100,     "name": "Fish-POST"   },   "id": 100,   "name": "GoldFish-POST",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 100,       "name": "Fish-POST"     }   ] } |
       | output         | {   "category": {     "id": 100,     "name": "Fish-POST"   },   "id": 100,   "name": "GoldFish-POST",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 100,       "name": "Fish-POST"     }   ] } |
       | method         | POST                                                                                                                                                                                                                                       |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 201
     And Verify across response includes following in the response
@@ -45,6 +51,8 @@ Feature: Test Pet API
       | input          | {   "category": {     "id": 100,     "name": "Fish-POST"   },   "id": 100,   "name": "GoldFish-POST",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 100,       "name": "Fish-POST"     }   ] } |
       | output         | {   "category": {     "id": 100,     "name": "Fish-POST"   },   "id": 100,   "name": "GoldFish-POST",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 100,       "name": "Fish-POST"     }   ] } |
       | method         | POST                                                                                                                                                                                                                                       |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 400
     And Verify across response includes following in the response
@@ -60,6 +68,8 @@ Feature: Test Pet API
       | status        | available     |
       | tags[0].id    | i~100         |
       | tags[0].name  | Fish-POST     |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in pets resource on pet
     Then Verify the status code is 201
     And Verify across response includes following in the response
@@ -76,13 +86,47 @@ Feature: Test Pet API
       | method                   | GET                                                                                                                                                                                                                                     |
       | availableParams[0].key   | petId                                                                                                                                                                                                                                   |
       | availableParams[0].value | 110                                                                                                                                                                                                                                     |
+    And add content type with given header params
+      | contentType | application/json |
+    When a user post application/json in virtualservices resource on virtualan
+    Then Verify the status code is 201
+    And Verify response with mockStatus includes following in the response
+      | mockStatus.code | Mock created successfully |
+
+  Scenario: Setup a mock service for  Pet with READ API with QUERY Param
+    Given Create Pet Mock data for the with given input
+      | url                              | /pets/findByTags                                                                                                                                                                                                                          |
+      | type                             | Response                                                                                                                                                                                                                                  |
+      | resource                         | pets                                                                                                                                                                                                                                      |
+      | httpStatusCode                   | 200                                                                                                                                                                                                                                       |
+      | output                           | {   "category": {     "id": 111,     "name": "Fish-GET-Q"   },   "id": 111,   "name": "Fish-GET-Q",   "photoUrls": [     "/fish/"   ],   "status": "available",   "tags": [     {       "id": 111,       "name": "Fish-GET-Q"     }   ] } |
+      | method                           | GET                                                                                                                                                                                                                                       |
+      | availableParams[0].key           | tags                                                                                                                                                                                                                                      |
+      | availableParams[0].value         | red=                                                                                                                                                                                                                                      |
+      | availableParams[0].parameterType | QUERY_PARAM                                                                                                                                                                                                                               |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 201
     And Verify response with mockStatus includes following in the response
       | mockStatus.code | Mock created successfully |
 
   Scenario: User calls service to READ a pet by its id
+    Given A user perform a api action
+    And add query by tags with given query params
+      | tags | red= |
+    And add content type with given header params
+      | contentType | application/json |
+    When a user get application/json in pets_findByTags resource on pet
+    Then Verify the status code is 200
+    And Verify across response includes following in the response
+      | id   | 111        |
+      | name | Fish-GET-Q |
+
+  Scenario: User calls service to READ a pet by its id
     Given pet with an path param petId of 110
+    And add content type with given header params
+      | contentType | application/json |
     When a user get application/json in pets_petId resource on pet
     Then Verify the status code is 200
     And Verify across response includes following in the response
@@ -99,6 +143,8 @@ Feature: Test Pet API
       | method                   | DELETE                                                                                                                                                                                                                                           |
       | availableParams[0].key   | petId                                                                                                                                                                                                                                            |
       | availableParams[0].value | 120                                                                                                                                                                                                                                              |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 201
     And Verify response with mockStatus includes following in the response
@@ -106,6 +152,8 @@ Feature: Test Pet API
 
   Scenario: User calls service to DELETE a pet by its id
     Given pet with an path param petId of 120
+    And add content type with given header params
+      | contentType | application/json |
     When a user delete application/json in pets_petId resource on pet
     Then Verify the status code is 200
     And Verify across response includes following in the response
@@ -123,6 +171,8 @@ Feature: Test Pet API
       | method                   | PUT                                                                                                                                                                                                                                     |
       | availableParams[0].key   | petId                                                                                                                                                                                                                                   |
       | availableParams[0].value | 130                                                                                                                                                                                                                                     |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in virtualservices resource on virtualan
     Then Verify the status code is 201
     And Verify response with mockStatus includes following in the response
@@ -139,6 +189,8 @@ Feature: Test Pet API
       | status        | available    |
       | tags[0].id    | i~130        |
       | tags[0].name  | Fish-PUT     |
+    And add content type with given header params
+      | contentType | application/json |
     When a user put application/json in pets_petId resource on pet
     Then Verify the status code is 200
     And Verify across response includes following in the response
@@ -147,6 +199,8 @@ Feature: Test Pet API
 
   Scenario: Parameterized GET - validate username
     Given pet with an path param username of John
+    And add content type with given header params
+      | contentType | application/json |
     When a user get application/json in user_username resource on pet
     Then Verify the status code is 200
     And Verify across response includes following in the response
@@ -155,6 +209,8 @@ Feature: Test Pet API
 
   Scenario: Parameterized PUT - PET
     Given pet with an path param petId of 6003
+    And add content type with given header params
+      | contentType | application/json |
     And Update with mock data with given input
       | category.id   | i~130     |
       | category.name | None-PUT  |
@@ -180,6 +236,8 @@ Feature: Test Pet API
       | status        | available |
       | tags[0].id    | i~100     |
       | tags[0].name  | Fish-POST |
+    And add content type with given header params
+      | contentType | application/json |
     When a user post application/json in pets resource on pet
     Then Verify the status code is 201
     And Verify across response includes following in the response
