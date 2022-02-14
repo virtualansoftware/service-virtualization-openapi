@@ -198,6 +198,12 @@
     </dependency>
 
 
+    <dependency>
+      <groupId>org.openapitools</groupId>
+      <artifactId>jackson-databind-nullable</artifactId>
+      <version>0.2.2</version>
+    </dependency>
+
     <!-- START Virtual Service API support -->
     <dependency>
       <groupId>io.virtualan</groupId>
