@@ -11,7 +11,7 @@
     <java.version>11</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <virtualan.version>2.4.1</virtualan.version>
+    <virtualan.version>2.4.0</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.1</hsqldb.version>
     <spring.boot.version>2.5.9</spring.boot.version>
@@ -49,10 +49,9 @@
               <apiPackage>org.openapitools.virtualan.api</apiPackage>
               <modelPackage>org.openapitools.virtualan.to</modelPackage>
               <generatorName>spring</generatorName>
-              <generateSupportingFiles>false</generateSupportingFiles>
-
               <configOptions>
                 <virtualService>true</virtualService>
+                <documentationProvider>springfox</documentationProvider>
               </configOptions>
             </configuration>
           </execution>
@@ -68,10 +67,9 @@
               <modelPackage>org.openapitools.virtualan.to</modelPackage>
               <generatorName>spring</generatorName>
               <skipValidateSpec>true</skipValidateSpec>
-              <generateSupportingFiles>false</generateSupportingFiles>
-
               <configOptions>
                 <virtualService>true</virtualService>
+                <documentationProvider>springfox</documentationProvider>
               </configOptions>
             </configuration>
           </execution>
@@ -88,6 +86,7 @@
               <generatorName>spring</generatorName>
               <configOptions>
                 <virtualService>true</virtualService>
+                <documentationProvider>springfox</documentationProvider>
               </configOptions>
             </configuration>
           </execution>
