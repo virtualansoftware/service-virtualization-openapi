@@ -199,8 +199,7 @@
     "output": "40",
     "availableParams": [],
     "headerParams": [],
-    "resource": "riskfactor",
-    "contentType": "JSON"
+    "resource": "riskfactor"
   },
   {
     "id": 8,
