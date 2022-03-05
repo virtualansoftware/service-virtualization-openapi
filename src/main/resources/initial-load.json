@@ -605,7 +605,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "lastUsedDateTime": "2022-01-06T20:59:07.459+00:00"
+    "contentType": "JSON"
   },
   {
     "id": 28,
