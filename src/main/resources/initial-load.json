@@ -64,7 +64,8 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "lastUsedDateTime": "2022-01-09T10:06:08.779+00:00"
+    "lastUsedDateTime": "2022-01-09T10:06:08.779+00:00",
+    "contentType": "JSON"
   },
   {
     "id": 4,
