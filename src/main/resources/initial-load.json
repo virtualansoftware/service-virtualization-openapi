@@ -19,8 +19,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
-
+    "lastUsedDateTime": "2022-01-09T10:13:44.557+00:00"
   },
   {
     "id": 2,
@@ -183,7 +182,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 7,
@@ -199,7 +198,8 @@
     "output": "40",
     "availableParams": [],
     "headerParams": [],
-    "resource": "riskfactor"
+    "resource": "riskfactor",
+    "lastUsedDateTime": "2022-01-09T10:06:04.146+00:00"
   },
   {
     "id": 8,
@@ -216,7 +216,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "persons",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 9,
@@ -241,7 +241,7 @@
     ],
     "headerParams": [],
     "resource": "persons",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:13:27.941+00:00"
   },
   {
     "id": 10,
@@ -258,7 +258,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "persons",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 11,
@@ -275,7 +275,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 12,
@@ -292,7 +292,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 13,
@@ -317,7 +317,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.451+00:00"
   },
   {
     "id": 14,
@@ -341,7 +341,7 @@
     ],
     "headerParams": [],
     "resource": "user",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.452+00:00"
   },
   {
     "id": 15,
@@ -365,7 +365,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.452+00:00"
   },
   {
     "id": 16,
@@ -390,7 +390,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.458+00:00"
   },
   {
     "id": 17,
@@ -407,7 +407,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:06:04.301+00:00"
   },
   {
     "id": 18,
@@ -424,7 +424,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:06:04.470+00:00"
   },
   {
     "id": 19,
@@ -448,7 +448,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:05:57.673+00:00"
   },
   {
     "id": 20,
@@ -465,7 +465,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "riskfactor",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.458+00:00"
   },
   {
     "id": 21,
@@ -489,7 +489,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:06:03.151+00:00"
   },
   {
     "id": 22,
@@ -513,7 +513,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:06:08.452+00:00"
   },
   {
     "id": 23,
@@ -529,7 +529,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.458+00:00"
   },
   {
     "id": 24,
@@ -546,7 +546,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.459+00:00"
   },
   {
     "id": 25,
@@ -563,7 +563,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.459+00:00"
   },
   {
     "id": 26,
@@ -580,7 +580,7 @@
     "availableParams": [],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.459+00:00"
   },
   {
     "id": 27,
@@ -604,7 +604,7 @@
     ],
     "headerParams": [],
     "resource": "pets",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-06T20:59:07.459+00:00"
   },
   {
     "id": 28,
@@ -635,6 +635,6 @@
     ],
     "headerParams": [],
     "resource": "persons",
-    "contentType": "JSON"
+    "lastUsedDateTime": "2022-01-09T10:13:32.652+00:00"
   }
 ]
