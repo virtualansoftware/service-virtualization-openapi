@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class DisableSpringDocQueryParameter {
 
   @PostConstruct
-  @Order(Ordered.LOWEST_PRECEDENCE-1 )
+  @Order(Ordered.LOWEST_PRECEDENCE )
   private void load(){
     System.setProperty("springdoc.swagger-ui.queryConfigEnabled","false");
   }
