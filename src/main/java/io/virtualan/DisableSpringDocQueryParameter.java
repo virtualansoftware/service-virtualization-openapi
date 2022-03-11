@@ -11,7 +11,7 @@ public class DisableSpringDocQueryParameter {
 
   @PostConstruct
   @Order(Ordered.LOWEST_PRECEDENCE )
-  private void load(){
+  public void load(){
     System.setProperty("springdoc.swagger-ui.queryConfigEnabled","false");
   }
 }
