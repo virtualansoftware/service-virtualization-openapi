@@ -2,6 +2,7 @@ package io.virtualan;
 
 
 import javax.annotation.PostConstruct;
+import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class DisableSpringDocQueryParameter {
 
   @PostConstruct
-  @Order(11111)
+  @Order(Ordered.LOWEST_PRECEDENCE-1 )
   private void load(){
     System.setProperty("springdoc.swagger-ui.queryConfigEnabled","false");
   }
