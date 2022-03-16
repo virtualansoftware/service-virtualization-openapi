@@ -1,17 +1,21 @@
 package io.virtualan;
 
 
-import javax.annotation.PostConstruct;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DisableSpringDocQueryParameter {
+public class DisableSpringDocQueryParameter
+implements ApplicationListener<ApplicationReadyEvent> {
 
-  @PostConstruct
-  @Order(Ordered.LOWEST_PRECEDENCE )
-  public void load(){
-    System.setProperty("springdoc.swagger-ui.queryConfigEnabled","false");
+
+  @Override
+  public void onApplicationEvent(final ApplicationReadyEvent event) {
+
+    System.setProperty("springdoc.swagger-ui.queryConfigEnabled", "false");
+
+    return;
   }
-}
+
+} 
