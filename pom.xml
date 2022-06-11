@@ -11,7 +11,7 @@
     <java.version>11</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <virtualan.version>2.5.1</virtualan.version>
+    <virtualan.version>2.5.2</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.0</hsqldb.version>
     <spring.boot.version>2.6.3</spring.boot.version>
@@ -34,7 +34,7 @@
       <plugin>
         <groupId>org.openapitools</groupId>
         <artifactId>openapi-generator-maven-plugin</artifactId>
-        <version>5.4.0</version>
+        <version>6.0.0</version>
         <executions>
           <execution>
             <id>Person-service-vs-api</id>
