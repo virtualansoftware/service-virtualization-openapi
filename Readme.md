@@ -1,6 +1,7 @@
 <h1 align="center" > Virtualan </h1>
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.virtualan/virtualan-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.virtualan%22%20AND%20a:%22virtualan-plugin%22)  [![Build Status](https://travis-ci.com/virtualansoftware/service-virtualization-openapi.svg?branch=master)](https://travis-ci.com/virtualansoftware/service-virtualization-openapi)
+[![Maven Central](https://img.shields.io/maven-central/v/io.virtualan/virtualan-plugin.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.virtualan%22%20AND%20a:%22virtualan-plugin%22) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvirtualansoftware%2Fservice-virtualization-openapi.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvirtualansoftware%2Fservice-virtualization-openapi?ref=badge_shield)
+ [![Build Status](https://travis-ci.com/virtualansoftware/service-virtualization-openapi.svg?branch=master)](https://travis-ci.com/virtualansoftware/service-virtualization-openapi)
 
 > Virtualan is an open source-based Open API Interface driven, Kafka, AMQ and MQTT Service virtualization product. It supports #OpenAPI, #AsyncAPI test development. This supports #shiftleft testing.
 
@@ -79,3 +80,7 @@
 - Invoke Virtualan UI:  			
 	- Navigate to http://localhost:8080/virtualan-ui.html 
 	- More details about the user interface refer: https://github.com/virtualansoftware/virtualan/wiki 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvirtualansoftware%2Fservice-virtualization-openapi.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvirtualansoftware%2Fservice-virtualization-openapi?ref=badge_large)
