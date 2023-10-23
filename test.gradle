@@ -1,0 +1,131 @@
+buildscript {
+ ext {
+    cxfVersion='3.2.2'
+    xjcVersion= '3.0.5'
+    jaxbOutputDir = "$buildDir/generated/cxf"
+    jaxb2BasicsVersion = '0.11.0'
+ }
+  repositories {
+         maven {
+             url "https://vclau1p0314.cna.com:8443/repository/maven-central/"
+         }
+     }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.4.RELEASE")
+    classpath "org.openapitools:openapi-generator-gradle-plugin:4.3.0"
+  }
+}
+
+configurations {
+    cxf
+}
+
+repositories {
+    repositories {
+           maven {
+               url "https://vclau1p0314.cna.com:8443/repository/maven-central/"
+           }
+       }
+}
+
+apply plugin: 'org.openapi.generator'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web-services:2.2.4.RELEASE'
+    compile 'io.virtualan:virtualization:1.0.2'
+    compile 'org.springframework:spring-context:5.2.8.RELEASE'
+    compile 'org.hsqldb:hsqldb:2.5.0'
+    testCompile 'org.springframework.boot:spring-boot-starter-test:2.2.5.RELEASE'
+
+    cxf "org.apache.cxf:cxf-tools-wsdlto-core:$cxfVersion"
+    cxf "org.apache.cxf:cxf-tools-wsdlto-frontend-jaxws:$cxfVersion"
+    cxf "org.apache.cxf:cxf-tools-wsdlto-databinding-jaxb:$cxfVersion"
+    cxf "org.jvnet.jaxb2_commons:jaxb2-fluent-api:3.0"
+    cxf "org.apache.cxf.xjcplugins:cxf-xjc-ts:$xjcVersion"
+
+    cxf "org.jvnet.jaxb2_commons:jaxb2-basics:$jaxb2BasicsVersion"
+    compile "org.jvnet.jaxb2_commons:jaxb2-basics-runtime:$jaxb2BasicsVersion"
+    compile "org.jvnet.jaxb2_commons:jaxb2-basics:$jaxb2BasicsVersion"
+    compile "org.apache.cxf.xjc-utils:cxf-xjc-runtime:$xjcVersion"
+    compile "org.jvnet.jaxb2_commons:jaxb2-basics-runtime:$jaxb2BasicsVersion"
+    compile 'commons-lang:commons-lang:2.6'
+}
+
+bootJar {
+    baseName = 'cna-virtualan-sv'
+    enabled=true
+    mainClassName = 'io.virtualan.SpringWsApplication'
+}
+
+
+group = 'io.virtualan.cna'
+description = 'cna-virtualan-sv'
+sourceCompatibility = '8'
+
+sourceSets {
+    main {
+        java {
+            srcDirs += "$buildDir/generated/src/main/java"
+            srcDirs += "$jaxbOutputDir"
+        }
+    }
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+task wsdl2java3QuotePolicy(type: JavaExec) {
+    ext {
+        outputDir = file("$jaxbOutputDir")
+    }
+    systemProperties = ['javax.xml.accessExternalSchema': 'file', 'file.encoding': 'UTF8']
+    outputs.upToDateWhen { false }
+    outputs.dir outputDir
+    main = 'org.apache.cxf.tools.wsdlto.WSDLToJava'
+    classpath = project.configurations.cxf
+    args '-d', outputDir
+    args '-fe', 'jaxws21'
+    args '-client'
+    args '-verbose'
+    args '-validate'
+    args '-mark-generated'
+    args '-xjc-Xfluent-api'
+    args '-xjc-Xts'
+    args '-xjc-XhashCode'
+    args '-xjc-Xequals'
+    args '-b', "$projectDir/src/main/resources/xjb/bindings.xjb"
+    args "$projectDir/src/main/resources/META-INF/resources/wsdl/xxxxxx-Soap/Xxxxxx.wsdl"
+    doLast {
+        println "----- xxxxxx  cxf jaxb2 files generated -----"
+    }
+}
+
+
+task quote(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask){
+    generatorName = "spring"
+    inputSpec = "$rootDir/src/main/resources/META-INF/resources/yaml/xxxxx/xxxxxxx.json".toString()
+    outputDir = "$buildDir/generated".toString()
+    apiPackage = "io.virtualan.api"
+    modelPackage = "io.virtualan.to"
+    skipValidateSpec = true
+    configOptions = [
+            virtualService: "true"
+    ]
+    doLast {
+        println "----- xxxx openAPI files generated -----"
+    }
+}
+
+compileJava.dependsOn xxxxx
+compileJava.dependsOn wsdl2java1xxx
