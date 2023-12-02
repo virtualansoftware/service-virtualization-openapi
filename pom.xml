@@ -8,13 +8,13 @@
   <description>Virtualan Rest virtualization and rest - Demo</description>
   <properties>
     <cucumblan.version>1.5.0</cucumblan.version>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <virtualan.version>2.5.5</virtualan.version>
+    <virtualan.version>2.5.4</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.0</hsqldb.version>
-    <spring.boot.version>2.6.6</spring.boot.version>
+    <spring.boot.version>2.7.14</spring.boot.version>
   </properties>
   <build>
     <finalName>sv-virtualan-rest-demo</finalName>
@@ -23,7 +23,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>2.7.17</version>
         <executions>
           <execution>
             <goals>
@@ -35,7 +34,7 @@
       <plugin>
         <groupId>org.openapitools</groupId>
         <artifactId>openapi-generator-maven-plugin</artifactId>
-        <version>6.0.0</version>
+        <version>6.6.0</version>
         <executions>
           <execution>
             <id>Person-service-vs-api</id>
@@ -235,7 +234,7 @@
     <dependency>
       <groupId>org.springdoc</groupId>
       <artifactId>springdoc-openapi-ui</artifactId>
-      <version>1.6.6</version>
+      <version>1.7.0</version>
     </dependency>
   </dependencies>
 
