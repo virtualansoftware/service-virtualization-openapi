@@ -40,6 +40,35 @@
     "contentType": "JSON"
   },
   {
+    "id": 2,
+    "operationId": "getPetById",
+    "httpStatusCode": "400",
+    "url": "/pets/{petId}",
+    "type": "Rule",
+    "requestType": "REST",
+    "usageCount": 0,
+    "priority": 0,
+    "method": "GET",
+    "rule": "parameters['petId'] == 0",
+    "output": {
+      "code": "PET_1000",
+      "message": "Pet identifier is not valid"
+    },
+    "availableParams": [
+      {
+        "key": "petId",
+        "value": "100",
+        "type": null,
+        "serviceType": null,
+        "parameterType": null
+      }
+    ],
+    "headerParams": [],
+    "resource": "pets",
+    "lastUsedDateTime": "2022-03-20T15:53:21.641+00:00",
+    "contentType": "JSON"
+  },
+  {
     "id": 3,
     "operationId": "addPet",
     "httpStatusCode": "200",
