@@ -8,10 +8,10 @@
   <description>Virtualan Rest virtualization and rest - Demo</description>
   <properties>
     <cucumblan.version>1.5.0</cucumblan.version>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <virtualan.version>2.5.4</virtualan.version>
+    <virtualan.version>3.0.0</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.0</hsqldb.version>
     <spring.boot.version>2.7.14</spring.boot.version>
@@ -225,11 +225,22 @@
       <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.4.0</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>io.virtualan</groupId>
       <artifactId>cucumblan-api</artifactId>
       <version>${cucumblan.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>rest-assured</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
