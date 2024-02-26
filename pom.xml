@@ -11,10 +11,11 @@
     <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <virtualan.version>3.0.0</virtualan.version>
+    <virtualan.version>3.1.0</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.0</hsqldb.version>
     <spring.boot.version>2.7.18</spring.boot.version>
+    <slf4j.version>2.0.12</slf4j.version>
   </properties>
   <build>
     <finalName>sv-virtualan-rest-demo</finalName>
@@ -165,7 +166,6 @@
     </plugins>
   </build>
 
-
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -229,7 +229,16 @@
       <version>${hsqldb.version}</version>
     </dependency>
     <!-- END Virtual Service API support -->
-
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
