@@ -9,12 +9,12 @@ phases:
       - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
       - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
       - docker build -t virtualan-mock:1.0 .
-      - docker tag  virtualan-mock:1.0 859764821238.dkr.ecr.us-east-1.amazonaws.com/virtualan-mock:1.0
+      - docker tag  virtualan-mock:1.0 859764821238.dkr.ecr.us-east-1.amazonaws.com/virtualan-mock
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 859764821238.dkr.ecr.us-east-1.amazonaws.com/virtualan-mock:1.0
+      - docker push 859764821238.dkr.ecr.us-east-1.amazonaws.com/virtualan-mock
 artifacts:
   files:
     - target/virtualan-pet.jar
