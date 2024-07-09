@@ -14,7 +14,7 @@ phases:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 329506957406.dkr.ecr.us-west-2.amazonaws.com/virtualan-mock:1.0
+      - docker push 859764821238.dkr.ecr.us-east-1.amazonaws.com/virtualan-mock:1.0
 artifacts:
   files:
     - target/virtualan-pet.jar
