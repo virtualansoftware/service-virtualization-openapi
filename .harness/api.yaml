@@ -1,0 +1,5 @@
+service:
+  name: api
+  identifier: api
+  orgIdentifier: default
+  projectIdentifier: ias_template
