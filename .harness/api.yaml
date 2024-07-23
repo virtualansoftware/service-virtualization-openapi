@@ -3,3 +3,15 @@ service:
   identifier: api
   orgIdentifier: default
   projectIdentifier: ias_template
+  serviceDefinition:
+    spec:
+      configFiles:
+        - configFile:
+            identifier: conf
+            spec:
+              store:
+                type: Harness
+                spec:
+                  files:
+                    - /vs/openapi.yml
+    type: NativeHelm
