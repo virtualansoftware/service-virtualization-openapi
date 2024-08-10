@@ -1,0 +1,190 @@
+openapi: 3.0.3
+info:
+  title: Configuration Management
+  description: Configuration Management
+  version: 0.1.0
+paths:
+  /api/v1/login/:
+    post:
+      tags:
+        - Login Api
+      summary: Loginuser
+      operationId: loginUser_api_v1_login__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginSchema'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                title: Response Loginuser Api V1 Login  Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/config/:
+    post:
+      tags:
+        - Config Api
+      summary: Save Configuration
+      operationId: save_configuration_api_v1_config__post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfigSchema'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                title: Response Save Configuration Api V1 Config  Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    get:
+      tags:
+        - Config Api
+      summary: Read Configuration
+      operationId: read_configuration_api_v1_config__get
+      parameters:
+        - name: env_name
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Env Name
+        - name: key_id
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Key Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfigSchema'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/v1/config/generate:
+    post:
+      tags:
+        - Config Api
+      summary: Generate Configuration
+      operationId: generate_configuration_api_v1_config_generate_post
+      parameters:
+        - name: env_name
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Env Name
+        - name: key_id
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Key Id
+        - name: template_file_name
+          in: query
+          required: true
+          schema:
+            type: string
+            title: Template File Name
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                title: Response Generate Configuration Api V1 Config Generate Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    ConfigSchema:
+      properties:
+        configMap:
+          type: object
+          title: Configmap
+        keyId:
+          type: string
+          title: Keyid
+        envName:
+          type: string
+          title: Envname
+      type: object
+      required:
+        - configMap
+        - keyId
+        - envName
+      title: ConfigSchema
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    LoginSchema:
+      properties:
+        email:
+          type: string
+          title: Email
+        password:
+          type: string
+          title: Password
+      type: object
+      required:
+        - email
+        - password
+      title: LoginSchema
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
