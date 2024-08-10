@@ -14,7 +14,7 @@
     <virtualan.version>3.1.0</virtualan.version>
     <cucumber.version>7.0.0</cucumber.version>
     <hsqldb.version>2.6.0</hsqldb.version>
-    <spring.boot.version>2.7.18</spring.boot.version>
+    <spring.boot.version>3.1.10</spring.boot.version>
     <slf4j.version>2.0.12</slf4j.version>
   </properties>
   <build>
