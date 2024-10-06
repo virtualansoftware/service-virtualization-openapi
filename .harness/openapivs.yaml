@@ -1,0 +1,4 @@
+service:
+  name: openapi-vs
+  identifier: openapivs
+  orgIdentifier: default
