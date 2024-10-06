@@ -1,0 +1,18 @@
+inputSet:
+  name: virtualan-inputset
+  identifier: virtualaninputset
+  orgIdentifier: default
+  projectIdentifier: ias_template
+  pipeline:
+    identifier: virtualanpipelinedemo
+    stages:
+      - stage:
+          identifier: deploy
+          type: Deployment
+          spec:
+            service:
+              serviceRef: virtualanopenapi
+            environment:
+              environmentRef: awsvirtualandemoenv
+              infrastructureDefinitions:
+                - identifier: awsvirtualaninfrademo
