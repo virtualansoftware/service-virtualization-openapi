@@ -48,10 +48,14 @@ kind: Ingress
 metadata:
   name: virtualan-ingress
 spec:
+  ingressClassName: nginx-virtualan
   rules:
   - http:
       paths:
       - path: /mock
+        pathType: Prefix
         backend:
-          serviceName: mock-svc
-          servicePort: 80
+          service:
+            name: mock-svc
+          service:
+            number:  80
