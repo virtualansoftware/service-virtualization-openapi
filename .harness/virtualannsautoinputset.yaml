@@ -1,0 +1,18 @@
+inputSet:
+  name: virtualan-ns-auto-inputset
+  identifier: virtualannsautoinputset
+  orgIdentifier: default
+  projectIdentifier: ias_template
+  pipeline:
+    identifier: undeployvirtualan
+    stages:
+      - stage:
+          identifier: undeploy
+          type: Deployment
+          spec:
+            service:
+              serviceRef: virtualanopenapiauto
+            environment:
+              environmentRef: awsvirtualanautoenv
+              infrastructureDefinitions:
+                - identifier: awsvirtualaninfraauto
