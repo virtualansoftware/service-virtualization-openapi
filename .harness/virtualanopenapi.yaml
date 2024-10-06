@@ -1,0 +1,5 @@
+service:
+  name: virtualan-openapi
+  identifier: virtualanopenapi
+  orgIdentifier: default
+  projectIdentifier: ias_template
