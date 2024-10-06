@@ -10,4 +10,6 @@ infrastructureDefinition:
     connectorRef: demo
     namespace: virtualan
     releaseName: release-<+INFRA_KEY_SHORT_ID>
-  allowSimultaneousDeployments: false
+  allowSimultaneousDeployments: true
+  scopedServices:
+    - virtualanopenapi
