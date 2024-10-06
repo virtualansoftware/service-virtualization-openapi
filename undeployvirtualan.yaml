@@ -2,9 +2,45 @@ pipeline:
   name: undeploy-virtualan
   identifier: undeployvirtualan
   tags: {}
-  template:
-    templateRef: org.undeploypipeline
-    versionLabel: v1
-    gitBranch: elan-harness-demo
   projectIdentifier: ias_template
   orgIdentifier: default
+  stages:
+    - stage:
+        name: undeploy
+        identifier: undeploy
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: virtualanopenapi
+          environment:
+            environmentRef: awsvirtualandemoenv
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: awsvirtualaninfrademo
+          execution:
+            steps:
+              - step:
+                  name: Rollout Deployment
+                  identifier: rolloutDeployment
+                  type: K8sRollingDeploy
+                  timeout: 10m
+                  spec:
+                    skipDryRun: false
+                    pruningEnabled: false
+            rollbackSteps:
+              - step:
+                  name: Rollback Rollout Deployment
+                  identifier: rollbackRolloutDeployment
+                  type: K8sRollingRollback
+                  timeout: 10m
+                  spec:
+                    pruningEnabled: false
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: StageRollback
