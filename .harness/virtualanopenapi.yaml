@@ -3,3 +3,21 @@ service:
   identifier: virtualanopenapi
   orgIdentifier: default
   projectIdentifier: ias_template
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: demo
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.GIT
+                  gitFetchType: Branch
+                  paths:
+                    - servicedeploy.yaml
+                  branch: elan-harness-demo
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+    type: Kubernetes
