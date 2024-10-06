@@ -10,6 +10,9 @@ spec:
   replicas: 3
   template:
     metadata:
+      # add this annotation under the pod template metadata of the services deployment YAML you want to monitor
+      annotations:
+        instrumentation.opentelemetry.io/inject-java: "true"
       labels:
         app: virtualan-mock
         env: dev
