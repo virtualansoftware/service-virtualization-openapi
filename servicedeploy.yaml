@@ -57,5 +57,5 @@ spec:
         backend:
           service:
             name: mock-svc
-          service:
-            number:  80
+            port:
+              number:  80
