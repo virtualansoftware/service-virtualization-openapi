@@ -1,0 +1,6 @@
+environment:
+  name: aws-virtualan-demo-env
+  identifier: awsvirtualandemoenv
+  orgIdentifier: default
+  projectIdentifier: ias_template
+  type: PreProduction
