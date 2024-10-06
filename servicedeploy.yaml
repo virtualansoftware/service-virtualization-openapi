@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: virtualan
-        image: "gcr.io/virtualan-gcp/virtualan-mock:1.0"
+        image: "docker.io/virtualan/service-virtualization:latest"
         securityContext:
           runAsUser: 2000
           allowPrivilegeEscalation: false
