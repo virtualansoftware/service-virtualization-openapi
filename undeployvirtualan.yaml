@@ -22,13 +22,16 @@ pipeline:
           execution:
             steps:
               - step:
-                  name: Rollout Deployment
-                  identifier: rolloutDeployment
-                  type: K8sRollingDeploy
-                  timeout: 10m
+                  type: K8sDelete
+                  name: K8sDelete_1
+                  identifier: K8sDelete_1
                   spec:
-                    skipDryRun: false
-                    pruningEnabled: false
+                    deleteResources:
+                      type: ManifestPath
+                      spec:
+                        manifestPaths:
+                          - " servicedeploy.yaml"
+                  timeout: 10m
             rollbackSteps:
               - step:
                   name: Rollback Rollout Deployment
