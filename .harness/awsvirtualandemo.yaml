@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: aws-virtualan-demo
+  identifier: awsvirtualandemo
+  orgIdentifier: default
+  projectIdentifier: ias_template
+  environmentRef: testenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: demo
+    namespace: virtualan
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
