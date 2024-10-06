@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: virtualan
-        image: "docker.io/virtualan/service-virtualization:latest"
+        image: "registry.hub.docker.com/virtualan/service-virtualization:latest"
         securityContext:
           runAsUser: 2000
           allowPrivilegeEscalation: false
