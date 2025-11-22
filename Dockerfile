@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-openjdk-alpine:17-jdk-slim
+FROM arm64v8/openjdk:21-ea-21-jdk-slim
 
 ADD target/sv-virtualan-rest-demo.jar /openapi/virtualan/virtualan-demo.jar
 
