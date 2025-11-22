@@ -82,55 +82,37 @@ components:
           type: boolean
         expression:
           type: string
-          nullable: true
         on_true:
           type: string
-          nullable: true
         on_false:
           type: string
-          nullable: true
         approver:
           type: string
-          nullable: true
         message:
           type: string
-          nullable: true
         next_on_approved:
           type: string
-          nullable: true
         next_on_rejected:
           type: string
-          nullable: true
         flow_name:
           type: string
-          nullable: true
         inputs:
           type: object
-          nullable: true
         next:
           type: string
-          nullable: true
         to:
           type: string
-          nullable: true
         subject:
           type: string
-          nullable: true
         body:
           type: string
-          nullable: true
         url:
           type: string
-          nullable: true
         method:
           type: string
-          nullable: true
         payload:
           type: object
-          nullable: true
         operator_group:
           type: string
-          nullable: true
         service:
           type: string
-          nullable: true
