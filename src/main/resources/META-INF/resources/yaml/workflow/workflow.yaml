@@ -1,0 +1,117 @@
+openapi: 3.0.1
+info:
+  title: Workflow Service API
+  version: 1.0.0
+  description: API to fetch workflow definitions and their steps.
+
+servers:
+  - url: https://api.example.com
+
+paths:
+  /workflows/{workflow_id}:
+    get:
+      summary: Get workflow definition by workflow ID
+      tags:
+        - Workflow
+      parameters:
+        - name: workflow_id
+          in: path
+          required: true
+          schema:
+            type: string
+          example: generic_business_flow_v1
+      responses:
+        "200":
+          description: Workflow description successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Workflow"
+        "404":
+          description: Workflow not found
+
+components:
+  schemas:
+    Workflow:
+      type: object
+      properties:
+        workflow_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        locked:
+          type: boolean
+        trigger:
+          $ref: "#/components/schemas/Trigger"
+        steps:
+          type: array
+          items:
+            $ref: "#/components/schemas/Step"
+
+    Trigger:
+      type: object
+      properties:
+        type:
+          type: string
+        event_name:
+          type: string
+
+    Step:
+      type: object
+      properties:
+        uid:
+          type: string
+        id:
+          type: string
+        type:
+          type: string
+          enum:
+            - condition
+            - approval
+            - business_flow
+            - send_email
+            - webhook
+            - call_operator
+            - action
+        status:
+          type: string
+          enum: [pending, completed, failed]
+        locked:
+          type: boolean
+        expression:
+          type: string
+          nullable: true
+        on_true:
+          type: string
+          nullable: true
+        on_false:
+          type: string
+          nullable: true
+        approver:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        next_on_approved:
+          type: string
+          nullable: true
+        next_on_rejected:
+          type: string
+          nullable: true
+        flow_name:
+          type: string
+          nullable: true
+        inputs:
+          type: object
+          nullable: true
+        next:
+          type: string
+          nullable: true
+        to:
+          type: string
+          nullable: true
+        subject:
+          type:
