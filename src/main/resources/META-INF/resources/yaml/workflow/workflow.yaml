@@ -114,4 +114,23 @@ components:
           type: string
           nullable: true
         subject:
-          type:
+          type: string
+          nullable: true
+        body:
+          type: string
+          nullable: true
+        url:
+          type: string
+          nullable: true
+        method:
+          type: string
+          nullable: true
+        payload:
+          type: object
+          nullable: true
+        operator_group:
+          type: string
+          nullable: true
+        service:
+          type: string
+          nullable: true
