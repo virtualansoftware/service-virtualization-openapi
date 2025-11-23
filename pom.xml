@@ -8,7 +8,7 @@
   <description>Virtualan Rest virtualization and rest - Demo</description>
   <properties>
     <cucumblan.version>1.5.0</cucumblan.version>
-    <java.version>17</java.version>
+    <java.version>19</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <virtualan.version>3.1.0</virtualan.version>
