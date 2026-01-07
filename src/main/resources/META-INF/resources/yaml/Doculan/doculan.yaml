@@ -1,0 +1,806 @@
+openapi: 3.0.1
+info:
+  title: Doculan
+  description: Form Management
+  version: 1.0.0
+tags:
+  - name: Document Template
+  - name: Document Tracker
+  - name: Files Operation
+paths:
+  /templates:
+    get:
+      summary: Get All Templates
+      deprecated: false
+      description: ''
+      operationId: get_all_templates_get
+      tags:
+        - Document Template
+      parameters:
+        - name: is_global
+          in: query
+          description: ''
+          required: false
+          example: 'false'
+          schema:
+            anyOf:
+              - type: boolean
+            title: Is Global
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/status:
+    get:
+      summary: Get Over All Status
+      deprecated: false
+      description: ''
+      operationId: get_document_status_documents_status_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: tracking_id
+          in: query
+          description: ''
+          required: true
+          example: 0254861d-bc0c-463f-9ab5-76007a024811
+          schema:
+            type: string
+            title: Tracking Id
+        - name: document_id
+          in: query
+          description: ''
+          required: true
+          example: 00f3435b-460a-40e0-a2a9-7767450b82f1
+          schema:
+            type: string
+            title: Document Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/party-status:
+    get:
+      summary: Get Document Status By Party
+      deprecated: false
+      description: ''
+      operationId: get_party_document_status_documents_party_status_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: tracking_id
+          in: query
+          description: ''
+          required: true
+          example: 13c33bd9-78e1-4a4d-9b1c-b0066eda140f
+          schema:
+            type: string
+            title: Tracking Id
+        - name: document_id
+          in: query
+          description: ''
+          required: true
+          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
+          schema:
+            type: string
+            title: Document Id
+        - name: party_id
+          in: query
+          description: ''
+          required: true
+          example: '1'
+          schema:
+            type: string
+            title: Party Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/resend:
+    post:
+      summary: Resend E-sign
+      deprecated: false
+      description: ''
+      operationId: resend_document_link_documents_resend_post
+      tags:
+        - Document Tracker
+      parameters:
+        - name: store_as_default
+          in: query
+          description: ''
+          required: false
+          example: 'false'
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              document_id: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
+              tracking_id: 076a1e8b-27ae-4e5a-8d7e-d6d24d98f2ed
+              validityDate: '2025-12-31T18:29:59.000Z'
+              remainder: 0
+              client_info:
+                ip: 122.164.82.75
+                city: Chennai
+                region: Tamil Nadu
+                country: IN
+                timezone: Asia/Kolkata
+                timestamp: '2025-12-21T15:44:01.699Z'
+                aws_region: ap-south-1
+                browser: Chrome
+                device: PC/Laptop
+                os: Windows 10
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/signed-pdf:
+    get:
+      summary: Download Signed Document
+      deprecated: false
+      description: ''
+      operationId: get_signed_pdf_documents_signed_pdf_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: tracking_id
+          in: query
+          description: ''
+          required: true
+          example: 45d32773-1c0b-467b-9d09-2505f8f64061
+          schema:
+            type: string
+            title: Tracking Id
+        - name: document_id
+          in: query
+          description: ''
+          required: true
+          example: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
+          schema:
+            type: string
+            title: Document Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/complete-certificates:
+    get:
+      summary: Download Certificate
+      deprecated: false
+      description: ''
+      operationId: get_completed_certificate_documents_complete_certificates_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: document_id
+          in: query
+          description: ''
+          required: true
+          example: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
+          schema:
+            type: string
+            title: Document Id
+        - name: tracking_id
+          in: query
+          description: ''
+          required: true
+          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
+          schema:
+            type: string
+            title: Tracking Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/log-action:
+    post:
+      summary: Log Action
+      deprecated: false
+      description: ''
+      operationId: log_action_api_documents_log_action_post
+      tags:
+        - Document Tracker
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              document_id: 682c5804-f860-4e98-802f-d5531b5aabd8
+              tracking_id: 7054eab3-c0f2-40e2-9b9e-731c1444df6d
+              action: CANCELLED
+              party_id: '1'
+              reason: User requested cancellation
+              client_info:
+                ip: 122.164.82.75
+                city: Chennai
+                region: Tamil Nadu
+                country: IN
+                timezone: Asia/Kolkata
+                timestamp: '2025-12-21T15:44:01.699Z'
+                browser: Chrome
+                device: PC/Laptop
+                os: Windows 10
+              holder:
+                name: Manikandan
+                email: manikandan.d@virtualandemo.com
+                address:
+                  address_line_1: 3333 warrenville road
+                  address_line_2: suite 200
+                  city: lisle
+                  country: USA
+                  state: IL
+                  zipcode: '60532'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/send:
+    post:
+      summary: Send E-sign
+      deprecated: false
+      description: ''
+      operationId: send_document_documents_send_post
+      tags:
+        - Document Tracker
+      parameters:
+        - name: store_as_default
+          in: query
+          description: ''
+          required: false
+          example: 'false'
+          schema:
+            type: boolean
+            default: false
+            title: Store As Default
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              document_id: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
+              validityDate: '2025-12-31T18:29:59.000Z'
+              remainder: 0
+              parties:
+                - id: '1'
+                  name: Vignesh
+                  email: vignesh.v@virtualansoftware.com
+              email_response:
+                - email_subject: 'Action Required: Contract for Your Electronic Signature'
+                  email_body: |-
+                    Dear [Fullname],
+
+                    We are pleased to inform you that your contract is now ready for your review and electronic signature.
+
+                    Please take a moment to carefully review the document. You can access and sign it securely through the following link: [Document Link].
+
+                    If you have any questions or require any clarifications before signing, please do not hesitate to contact us.
+
+                    Thank you for your prompt attention to this matter.
+
+                    Best regards,
+
+                    Virtualan Team
+              cc_emails:
+                - gowtham.v@virtualandemo.com
+              client_info:
+                ip: 122.164.82.75
+                city: Chennai
+                region: Tamil Nadu
+                country: IN
+                timezone: Asia/Kolkata
+                timestamp: '2025-12-21T15:44:01.699Z'
+                aws_region: ap-south-1
+                browser: Chrome
+                device: PC/Laptop
+                os: Windows 10
+              holder:
+                name: Manikandan
+                email: manikandan.d@virtualandemo.com
+                address:
+                  address_line_1: 3333 warrenville road
+                  address_line_2: suite 200
+                  city: lisle
+                  country: USA
+                  state: Il
+                  zipcode: '60532'
+              otp_enabled: false
+              template_info:
+                template_type: Myself
+                template_name: Client_api_demo
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/sign:
+    post:
+      summary: Sign  Api
+      deprecated: false
+      description: ''
+      operationId: sign_field_api_documents_sign_post
+      tags:
+        - Document Tracker
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+            example:
+              tracking_id: 98db097c-56f6-4ffa-9c6e-62efbae24b36
+              document_id: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
+              party_id: '1'
+              fields:
+                - fields_ids:
+                    - field_id: 1766751979232-text
+                      value: Maxin
+                      font: ''
+                      style: ''
+              client_info:
+                ip: 38.134.138.151
+                city: Chennai
+                region: Tamil Nadu
+                country: IN
+                timezone: Asia/Kolkata
+                timestamp: '2025-12-27T15:32:59.239Z'
+                latitude: ''
+                longitude: ''
+                aws_region: ap-south-1
+                browser: Chrome
+                device: PC/Laptop
+                os: Windows 10
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /files/{document_id}:
+    get:
+      summary: Get Document
+      deprecated: false
+      description: ''
+      operationId: get_file_files__document_id__get
+      tags:
+        - Files Operation
+      parameters:
+        - name: document_id
+          in: path
+          description: ''
+          required: true
+          example: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
+          schema:
+            type: string
+            title: Document Id
+        - name: return_pdf
+          in: query
+          description: Return PDF file if true, otherwise return metadata
+          required: false
+          example: 'false'
+          schema:
+            type: boolean
+            description: Return PDF file if true, otherwise return metadata
+            default: false
+            title: Return Pdf
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJpZCI6IjY4ZWNhMWE0NjliOTIzNDM5MTU1YmFhYyIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJEYW5pZWwiLCJ1c2VyX2VtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZW1haWwiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJkb21haW5fbmFtZSI6InZpcnR1YWxhbmRlbW8uY29tIiwic3Vic2NyaXB0aW9uX3N0YXR1cyI6IkVudGVycHJpc2UiLCJvcmciOiJ2aXJ0dWFsYW5kZW1vLmNvbSIsImV4cCI6MTc2NzIxODQ2MX0.BpXfSEWoiXUcWdAm0iNN8OSGs5VDgT8et5-mHT7EA7E
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security:
+        - bearer: []
+  /files/:
+    get:
+      summary: Get Documents
+      deprecated: false
+      description: ''
+      operationId: list_files_files__get
+      tags:
+        - Files Operation
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+      security: []
+  /documents/{tracking_id}:
+    get:
+      summary: Get Tracking Metadata
+      deprecated: false
+      description: ''
+      operationId: get_tracking_metadata_documents__tracking_id__get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: tracking_id
+          in: path
+          description: ''
+          required: true
+          example: 45d32773-1c0b-467b-9d09-2505f8f64061
+          schema:
+            type: string
+            title: Tracking Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/trackings-status:
+    get:
+      summary: Get All Tracking Ids By Status
+      deprecated: false
+      description: ''
+      operationId: get_all_tracking_ids_by_status_documents_trackings_status_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+      security: []
+  /documents/all-status:
+    get:
+      summary: Get All Document Statuses
+      deprecated: false
+      description: ''
+      operationId: get_all_document_statuses_documents_all_status_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+      security: []
+  /templates/{template_name}:
+    get:
+      summary: 'Get Template '
+      deprecated: false
+      description: ''
+      operationId: get_templates__template_name__get
+      tags:
+        - Document Template
+      parameters:
+        - name: template_name
+          in: path
+          description: ''
+          required: true
+          example: ATTESTATION AND AGREEMENT
+          schema:
+            type: string
+            title: Template Name
+        - name: is_global
+          in: query
+          description: ''
+          required: false
+          example: 'false'
+          schema:
+            type: boolean
+            default: false
+            title: Is Global
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+  /documents/signed-package:
+    get:
+      summary: Download Signed Document Package
+      deprecated: false
+      description: ''
+      operationId: download_signed_document_package_documents_signed_package_get
+      tags:
+        - Document Tracker
+      parameters:
+        - name: document_id
+          in: query
+          description: ''
+          required: true
+          example: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
+          schema:
+            type: string
+            title: Document Id
+        - name: tracking_id
+          in: query
+          description: ''
+          required: true
+          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
+          schema:
+            type: string
+            title: Tracking Id
+        - name: Authorization
+          in: header
+          description: ''
+          required: false
+          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+          headers: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      security: []
+components:
+  schemas: {}
+  responses: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+servers: []
+security: []
