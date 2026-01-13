@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Doculan
   description: Form Management
-  version: 1.0.0
+  version: 0.1.0
 tags:
   - name: Document Template
   - name: Document Tracker
@@ -10,7 +10,7 @@ tags:
 paths:
   /templates:
     get:
-      summary: Get All Templates
+      summary: Get All
       deprecated: false
       description: ''
       operationId: get_all_templates_get
@@ -21,18 +21,10 @@ paths:
           in: query
           description: ''
           required: false
-          example: 'false'
           schema:
             anyOf:
               - type: boolean
             title: Is Global
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -45,13 +37,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/status:
     get:
-      summary: Get Over All Status
+      summary: Get Document Status
       deprecated: false
       description: ''
       operationId: get_document_status_documents_status_get
@@ -62,7 +54,6 @@ paths:
           in: query
           description: ''
           required: true
-          example: 0254861d-bc0c-463f-9ab5-76007a024811
           schema:
             type: string
             title: Tracking Id
@@ -70,17 +61,9 @@ paths:
           in: query
           description: ''
           required: true
-          example: 00f3435b-460a-40e0-a2a9-7767450b82f1
           schema:
             type: string
             title: Document Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -93,13 +76,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/party-status:
     get:
-      summary: Get Document Status By Party
+      summary: Get Party Document Status
       deprecated: false
       description: ''
       operationId: get_party_document_status_documents_party_status_get
@@ -110,7 +93,6 @@ paths:
           in: query
           description: ''
           required: true
-          example: 13c33bd9-78e1-4a4d-9b1c-b0066eda140f
           schema:
             type: string
             title: Tracking Id
@@ -118,7 +100,6 @@ paths:
           in: query
           description: ''
           required: true
-          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
           schema:
             type: string
             title: Document Id
@@ -126,17 +107,9 @@ paths:
           in: query
           description: ''
           required: true
-          example: '1'
           schema:
             type: string
             title: Party Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -149,55 +122,24 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/resend:
     post:
-      summary: Resend E-sign
+      summary: Resend Document Link
       deprecated: false
       description: ''
       operationId: resend_document_link_documents_resend_post
       tags:
         - Document Tracker
-      parameters:
-        - name: store_as_default
-          in: query
-          description: ''
-          required: false
-          example: 'false'
-          schema:
-            type: string
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
+      parameters: []
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              properties: {}
-            example:
-              document_id: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
-              tracking_id: 076a1e8b-27ae-4e5a-8d7e-d6d24d98f2ed
-              validityDate: '2025-12-31T18:29:59.000Z'
-              remainder: 0
-              client_info:
-                ip: 122.164.82.75
-                city: Chennai
-                region: Tamil Nadu
-                country: IN
-                timezone: Asia/Kolkata
-                timestamp: '2025-12-21T15:44:01.699Z'
-                aws_region: ap-south-1
-                browser: Chrome
-                device: PC/Laptop
-                os: Windows 10
+              $ref: '#/components/schemas/DocumentResendRequest'
         required: true
       responses:
         '200':
@@ -211,13 +153,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/signed-pdf:
     get:
-      summary: Download Signed Document
+      summary: Get Signed Pdf
       deprecated: false
       description: ''
       operationId: get_signed_pdf_documents_signed_pdf_get
@@ -228,7 +170,6 @@ paths:
           in: query
           description: ''
           required: true
-          example: 45d32773-1c0b-467b-9d09-2505f8f64061
           schema:
             type: string
             title: Tracking Id
@@ -236,17 +177,9 @@ paths:
           in: query
           description: ''
           required: true
-          example: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
           schema:
             type: string
             title: Document Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -259,13 +192,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/complete-certificates:
     get:
-      summary: Download Certificate
+      summary: Get Completed Certificate
       deprecated: false
       description: ''
       operationId: get_completed_certificate_documents_complete_certificates_get
@@ -276,7 +209,6 @@ paths:
           in: query
           description: ''
           required: true
-          example: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
           schema:
             type: string
             title: Document Id
@@ -284,17 +216,9 @@ paths:
           in: query
           description: ''
           required: true
-          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
           schema:
             type: string
             title: Tracking Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -304,58 +228,24 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/log-action:
     post:
-      summary: Log Action
+      summary: Log Action Api
       deprecated: false
       description: ''
       operationId: log_action_api_documents_log_action_post
       tags:
         - Document Tracker
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
+      parameters: []
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              properties: {}
-            example:
-              document_id: 682c5804-f860-4e98-802f-d5531b5aabd8
-              tracking_id: 7054eab3-c0f2-40e2-9b9e-731c1444df6d
-              action: CANCELLED
-              party_id: '1'
-              reason: User requested cancellation
-              client_info:
-                ip: 122.164.82.75
-                city: Chennai
-                region: Tamil Nadu
-                country: IN
-                timezone: Asia/Kolkata
-                timestamp: '2025-12-21T15:44:01.699Z'
-                browser: Chrome
-                device: PC/Laptop
-                os: Windows 10
-              holder:
-                name: Manikandan
-                email: manikandan.d@virtualandemo.com
-                address:
-                  address_line_1: 3333 warrenville road
-                  address_line_2: suite 200
-                  city: lisle
-                  country: USA
-                  state: IL
-                  zipcode: '60532'
+              $ref: '#/components/schemas/LogActionRequest'
         required: true
       responses:
         '200':
@@ -369,13 +259,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/send:
     post:
-      summary: Send E-sign
+      summary: Send Document
       deprecated: false
       description: ''
       operationId: send_document_documents_send_post
@@ -386,75 +276,15 @@ paths:
           in: query
           description: ''
           required: false
-          example: 'false'
           schema:
             type: boolean
             default: false
             title: Store As Default
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              properties: {}
-            example:
-              document_id: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
-              validityDate: '2025-12-31T18:29:59.000Z'
-              remainder: 0
-              parties:
-                - id: '1'
-                  name: Vignesh
-                  email: vignesh.v@virtualansoftware.com
-              email_response:
-                - email_subject: 'Action Required: Contract for Your Electronic Signature'
-                  email_body: |-
-                    Dear [Fullname],
-
-                    We are pleased to inform you that your contract is now ready for your review and electronic signature.
-
-                    Please take a moment to carefully review the document. You can access and sign it securely through the following link: [Document Link].
-
-                    If you have any questions or require any clarifications before signing, please do not hesitate to contact us.
-
-                    Thank you for your prompt attention to this matter.
-
-                    Best regards,
-
-                    Virtualan Team
-              cc_emails:
-                - gowtham.v@virtualandemo.com
-              client_info:
-                ip: 122.164.82.75
-                city: Chennai
-                region: Tamil Nadu
-                country: IN
-                timezone: Asia/Kolkata
-                timestamp: '2025-12-21T15:44:01.699Z'
-                aws_region: ap-south-1
-                browser: Chrome
-                device: PC/Laptop
-                os: Windows 10
-              holder:
-                name: Manikandan
-                email: manikandan.d@virtualandemo.com
-                address:
-                  address_line_1: 3333 warrenville road
-                  address_line_2: suite 200
-                  city: lisle
-                  country: USA
-                  state: Il
-                  zipcode: '60532'
-              otp_enabled: false
-              template_info:
-                template_type: Myself
-                template_name: Client_api_demo
+              $ref: '#/components/schemas/DocumentRequest'
         required: true
       responses:
         '200':
@@ -468,55 +298,24 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /documents/sign:
     post:
-      summary: Sign  Api
+      summary: Sign Field Api
       deprecated: false
       description: ''
       operationId: sign_field_api_documents_sign_post
       tags:
         - Document Tracker
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
+      parameters: []
       requestBody:
         content:
           application/json:
             schema:
-              type: object
-              properties: {}
-            example:
-              tracking_id: 98db097c-56f6-4ffa-9c6e-62efbae24b36
-              document_id: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
-              party_id: '1'
-              fields:
-                - fields_ids:
-                    - field_id: 1766751979232-text
-                      value: Maxin
-                      font: ''
-                      style: ''
-              client_info:
-                ip: 38.134.138.151
-                city: Chennai
-                region: Tamil Nadu
-                country: IN
-                timezone: Asia/Kolkata
-                timestamp: '2025-12-27T15:32:59.239Z'
-                latitude: ''
-                longitude: ''
-                aws_region: ap-south-1
-                browser: Chrome
-                device: PC/Laptop
-                os: Windows 10
+              $ref: '#/components/schemas/SignField'
         required: true
       responses:
         '200':
@@ -530,13 +329,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
   /files/{document_id}:
     get:
-      summary: Get Document
+      summary: Get File
       deprecated: false
       description: ''
       operationId: get_file_files__document_id__get
@@ -547,7 +346,7 @@ paths:
           in: path
           description: ''
           required: true
-          example: d0fcb9c7-4eff-455e-914c-0cce2903c8b4
+          example: ''
           schema:
             type: string
             title: Document Id
@@ -555,19 +354,11 @@ paths:
           in: query
           description: Return PDF file if true, otherwise return metadata
           required: false
-          example: 'false'
           schema:
             type: boolean
             description: Return PDF file if true, otherwise return metadata
             default: false
             title: Return Pdf
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJpZCI6IjY4ZWNhMWE0NjliOTIzNDM5MTU1YmFhYyIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJEYW5pZWwiLCJ1c2VyX2VtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZW1haWwiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJkb21haW5fbmFtZSI6InZpcnR1YWxhbmRlbW8uY29tIiwic3Vic2NyaXB0aW9uX3N0YXR1cyI6IkVudGVycHJpc2UiLCJvcmciOiJ2aXJ0dWFsYW5kZW1vLmNvbSIsImV4cCI6MTc2NzIxODQ2MX0.BpXfSEWoiXUcWdAm0iNN8OSGs5VDgT8et5-mHT7EA7E
-          schema:
-            type: string
       responses:
         '200':
           description: Successful Response
@@ -580,27 +371,19 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties: {}
+                $ref: '#/components/schemas/HTTPValidationError'
           headers: {}
       security:
-        - bearer: []
+        - APIKeyHeader: []
   /files/:
     get:
-      summary: Get Documents
+      summary: List Files
       deprecated: false
       description: ''
       operationId: list_files_files__get
       tags:
         - Files Operation
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
+      parameters: []
       responses:
         '200':
           description: Successful Response
@@ -608,199 +391,517 @@ paths:
             application/json:
               schema: {}
           headers: {}
-      security: []
-  /documents/{tracking_id}:
-    get:
-      summary: Get Tracking Metadata
-      deprecated: false
-      description: ''
-      operationId: get_tracking_metadata_documents__tracking_id__get
-      tags:
-        - Document Tracker
-      parameters:
-        - name: tracking_id
-          in: path
-          description: ''
-          required: true
-          example: 45d32773-1c0b-467b-9d09-2505f8f64061
-          schema:
-            type: string
-            title: Tracking Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful Response
-          content:
-            application/json:
-              schema: {}
-          headers: {}
-        '422':
-          description: Validation Error
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security: []
-  /documents/trackings-status:
-    get:
-      summary: Get All Tracking Ids By Status
-      deprecated: false
-      description: ''
-      operationId: get_all_tracking_ids_by_status_documents_trackings_status_get
-      tags:
-        - Document Tracker
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
-
-      responses:
-        '200':
-          description: Successful Response
-          content:
-            application/json:
-              schema: {}
-          headers: {}
-      security: []
-  /documents/all-status:
-    get:
-      summary: Get All Document Statuses
-      deprecated: false
-      description: ''
-      operationId: get_all_document_statuses_documents_all_status_get
-      tags:
-        - Document Tracker
-      parameters:
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful Response
-          content:
-            application/json:
-              schema: {}
-          headers: {}
-      security: []
-  /templates/{template_name}:
-    get:
-      summary: 'Get Template '
-      deprecated: false
-      description: ''
-      operationId: get_templates__template_name__get
-      tags:
-        - Document Template
-      parameters:
-        - name: template_name
-          in: path
-          description: ''
-          required: true
-          example: ATTESTATION AND AGREEMENT
-          schema:
-            type: string
-            title: Template Name
-        - name: is_global
-          in: query
-          description: ''
-          required: false
-          example: 'false'
-          schema:
-            type: boolean
-            default: false
-            title: Is Global
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful Response
-          content:
-            application/json:
-              schema: {}
-          headers: {}
-        '422':
-          description: Validation Error
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security: []
-  /documents/signed-package:
-    get:
-      summary: Download Signed Document Package
-      deprecated: false
-      description: ''
-      operationId: download_signed_document_package_documents_signed_package_get
-      tags:
-        - Document Tracker
-      parameters:
-        - name: document_id
-          in: query
-          description: ''
-          required: true
-          example: fce50e1e-5d05-4cf8-99ba-e62994f3ceb0
-          schema:
-            type: string
-            title: Document Id
-        - name: tracking_id
-          in: query
-          description: ''
-          required: true
-          example: e1bfeeb9-a677-43ad-b211-0b4afbd11a77
-          schema:
-            type: string
-            title: Tracking Id
-        - name: Authorization
-          in: header
-          description: ''
-          required: false
-          example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5pa2FuZGFuLmRAdmlydHVhbGFuZGVtby5jb20iLCJjbGllbnRfaWQiOiI2OGVjYTFhNDY5YjkyMzQzOTE1NWJhYWMiLCJyb2xlIjoidGhpcmQtcGFydHktY2xpZW50IiwidXNlcl9lbWFpbCI6Im1hbmlrYW5kYW4uZEB2aXJ0dWFsYW5kZW1vLmNvbSIsImVtYWlsIjoibWFuaWthbmRhbi5kQHZpcnR1YWxhbmRlbW8uY29tIiwiZXhwIjoxNzY3NzA1NzM1fQ.ERAoBnlPJNIplUZ70FKJ72bpKXHvhbVpy2EvvU5jPQo
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful Response
-          content:
-            application/json:
-              schema: {}
-          headers: {}
-        '422':
-          description: Validation Error
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: {}
-          headers: {}
-      security: []
+      security:
+        - APIKeyHeader: []
 components:
-  schemas: {}
+  schemas:
+    ClientInfo:
+      properties:
+        ip:
+          type: string
+          title: Ip
+        city:
+          type: string
+          title: City
+        region:
+          type: string
+          title: Region
+        country:
+          type: string
+          title: Country
+        timezone:
+          type: string
+          title: Timezone
+        timestamp:
+          type: string
+          title: Timestamp
+        browser:
+          type: string
+          title: Browser
+        device:
+          type: string
+          title: Device
+        os:
+          type: string
+          title: Os
+      type: object
+      required:
+        - ip
+        - city
+        - region
+        - country
+        - timezone
+        - timestamp
+        - browser
+        - device
+        - os
+      title: ClientInfo
+    DocumentRequest:
+      properties:
+        document_id:
+          type: string
+          title: Document Id
+        validityDate:
+          type: string
+          title: Validitydate
+        remainder:
+          type: integer
+          title: Remainder
+        pdfSize:
+          $ref: '#/components/schemas/PdfSize'
+          nullable: true
+        parties:
+          items:
+            $ref: '#/components/schemas/app__schemas__tracking_schemas__Party'
+          type: array
+          title: Parties
+        fields:
+          anyOf:
+            - items:
+                $ref: '#/components/schemas/Field'
+              type: array
+          title: Fields
+        email_response:
+          items:
+            $ref: '#/components/schemas/EmailResponse'
+          type: array
+          title: Email Response
+        cc_emails:
+          anyOf:
+            - items:
+                type: string
+                format: email
+              type: array
+          title: Cc Emails
+        client_info:
+          $ref: '#/components/schemas/ClientInfo'
+        holder:
+          $ref: '#/components/schemas/app__schemas__tracking_schemas__Holder'
+          nullable: true
+        scheduled_datetime:
+          anyOf:
+            - type: string
+              format: date-time
+          title: Scheduled Datetime
+        pages:
+          anyOf:
+            - items:
+                $ref: '#/components/schemas/Pages'
+              type: array
+          title: Pages
+        otp_enabled:
+          anyOf:
+            - type: boolean
+
+          title: Otp Enabled
+          default: true
+        wet_sign:
+          anyOf:
+            - type: boolean
+          title: Wet Sign
+          default: false
+        template_info:
+          $ref: '#/components/schemas/Template'
+          nullable: true
+        embed_config:
+          $ref: '#/components/schemas/EmbedSignConfig'
+          nullable: true
+      type: object
+      required:
+        - document_id
+        - validityDate
+        - remainder
+        - parties
+        - email_response
+        - client_info
+        - holder
+      title: DocumentRequest
+    DocumentResendRequest:
+      properties:
+        document_id:
+          type: string
+          title: Document Id
+        tracking_id:
+          type: string
+          title: Tracking Id
+        validityDate:
+          anyOf:
+            - type: string
+          title: Validitydate
+        remainder:
+          anyOf:
+            - type: integer
+          title: Remainder
+        client_info:
+          $ref: '#/components/schemas/ClientInfo'
+      type: object
+      required:
+        - document_id
+        - tracking_id
+        - validityDate
+        - remainder
+        - client_info
+      title: DocumentResendRequest
+    EmailResponse:
+      properties:
+        email_subject:
+          type: string
+          title: Email Subject
+        email_body:
+          type: string
+          title: Email Body
+      type: object
+      required:
+        - email_subject
+        - email_body
+      title: EmailResponse
+    EmbedSignConfig:
+      properties:
+        party_id:
+          type: string
+          title: Party Id
+        party_email:
+          type: string
+          title: Party Email
+        enabled:
+          type: boolean
+          title: Enabled
+          default: true
+      type: object
+      required:
+        - party_id
+        - party_email
+      title: EmbedSignConfig
+    Field:
+      properties:
+        id:
+          type: string
+          title: Id
+        type:
+          type: string
+          title: Type
+        x:
+          type: integer
+          title: X
+        'y':
+          type: integer
+          title: 'Y'
+        width:
+          anyOf:
+            - type: integer
+          title: Width
+        height:
+          anyOf:
+            - type: integer
+          title: Height
+        page:
+          type: integer
+          title: Page
+        color:
+          type: string
+          title: Color
+        style:
+          anyOf:
+            - type: string
+          title: Style
+        partyId:
+          type: string
+          title: Partyid
+        required:
+          anyOf:
+            - type: boolean
+
+          title: Required
+          default: false
+        record:
+          anyOf:
+            - type: boolean
+
+          title: Record
+          default: false
+        timestamp:
+          anyOf:
+            - type: boolean
+
+          title: Timestamp
+          default: false
+        options:
+          anyOf:
+            - items:
+                type: string
+              type: array
+
+          title: Options
+      type: object
+      required:
+        - id
+        - type
+        - x
+        - 'y'
+        - width
+        - height
+        - page
+        - color
+        - partyId
+      title: Field
+    Fields:
+      properties:
+        field_id:
+          type: string
+          title: Field Id
+        font:
+          anyOf:
+            - type: string
+
+          title: Font
+        style:
+          anyOf:
+            - type: string
+
+          title: Style
+        value:
+          anyOf:
+            - type: string
+
+          title: Value
+      type: object
+      required:
+        - field_id
+        - font
+        - style
+      title: Fields
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    LogActionRequest:
+      properties:
+        document_id:
+          type: string
+          title: Document Id
+        tracking_id:
+          type: string
+          title: Tracking Id
+        action:
+          type: string
+          enum:
+            - CANCELLED
+            - DECLINED
+          title: Action
+        party_id:
+          anyOf:
+            - type: string
+
+          title: Party Id
+        reason:
+          anyOf:
+            - type: string
+
+          title: Reason
+        client_info:
+          $ref: '#/components/schemas/ClientInfo'
+        holder:
+          $ref: '#/components/schemas/app__schemas__tracking_schemas__Holder'
+          nullable: true
+      type: object
+      required:
+        - document_id
+        - tracking_id
+        - action
+        - client_info
+        - holder
+      title: LogActionRequest
+    Pages:
+      properties:
+        page_number:
+          type: integer
+          title: Page Number
+        page_width:
+          type: integer
+          title: Page Width
+        page_height:
+          type: integer
+          title: Page Height
+      type: object
+      required:
+        - page_number
+        - page_width
+        - page_height
+      title: Pages
+    PdfSize:
+      properties:
+        pdfWidth:
+          type: integer
+          title: Pdfwidth
+        pdfHeight:
+          type: integer
+          title: Pdfheight
+      type: object
+      required:
+        - pdfWidth
+        - pdfHeight
+      title: PdfSize
+    SignField:
+      properties:
+        tracking_id:
+          type: string
+          title: Tracking Id
+        document_id:
+          type: string
+          title: Document Id
+        party_id:
+          type: string
+          title: Party Id
+        fields:
+          items:
+            $ref: '#/components/schemas/UserFields'
+          type: array
+          title: Fields
+        client_info:
+          $ref: '#/components/schemas/ClientInfo'
+      type: object
+      required:
+        - tracking_id
+        - document_id
+        - party_id
+        - fields
+        - client_info
+      title: SignField
+    Template:
+      properties:
+        template_type:
+          type: string
+          enum:
+            - Team
+            - Myself
+          title: Template Type
+        template_name:
+          type: string
+          title: Template Name
+      type: object
+      required:
+        - template_type
+        - template_name
+      title: Template
+    UserFields:
+      properties:
+        fields_ids:
+          items:
+            $ref: '#/components/schemas/Fields'
+          type: array
+          title: Fields Ids
+      type: object
+      required:
+        - fields_ids
+      title: UserFields
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+              - type: string
+              - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+        - loc
+        - msg
+        - type
+      title: ValidationError
+    app__schemas__tracking_schemas__Address:
+      properties:
+        address_line_1:
+          type: string
+          title: Address Line 1
+        address_line_2:
+          anyOf:
+            - type: string
+
+          title: Address Line 2
+        city:
+          type: string
+          title: City
+        country:
+          anyOf:
+            - type: string
+
+          title: Country
+        state:
+          type: string
+          title: State
+        zipcode:
+          type: string
+          title: Zipcode
+      type: object
+      required:
+        - address_line_1
+        - address_line_2
+        - city
+        - country
+        - state
+        - zipcode
+      title: Address
+    app__schemas__tracking_schemas__Holder:
+      properties:
+        name:
+          type: string
+          title: Name
+        email:
+          type: string
+          title: Email
+        address:
+          $ref: '#/components/schemas/app__schemas__tracking_schemas__Address'
+          nullable: true
+      type: object
+      required:
+        - name
+        - email
+      title: Holder
+    app__schemas__tracking_schemas__Party:
+      properties:
+        id:
+          anyOf:
+            - type: string
+
+          title: Id
+        name:
+          type: string
+          title: Name
+        email:
+          type: string
+          title: Email
+        color:
+          anyOf:
+            - type: string
+
+          title: Color
+        priority:
+          anyOf:
+            - type: integer
+
+          title: Priority
+      type: object
+      required:
+        - name
+        - email
+      title: Party
   responses: {}
   securitySchemes:
-    bearer:
-      type: http
-      scheme: bearer
+    APIKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-Key
 servers: []
 security: []
