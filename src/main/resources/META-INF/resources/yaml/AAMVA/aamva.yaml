@@ -1,0 +1,332 @@
+openapi: 3.0.3
+
+info:
+  title: DLDV REST API
+  description: Driver License Data Verification REST API
+  version: 3.0.0
+
+servers:
+  - url: https://api.example.com
+    description: API Server
+
+paths:
+  /dldv/verify:
+    post:
+      summary: Verify driver license information
+      description: >
+        Verifies driver license credential and person information
+        and returns match results for each validated field.
+      operationId: verifyDriverLicense
+
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DldvRequest"
+            example:
+              networkControl:
+                transactionLocator: "0ba805dd-5658-4cbc-b5c9-d7a0c6e9dca8"
+                messageOriginator: "ABC"
+                messageDestination: "TX"
+                billingCategory: "Online"
+              dln: "12345678"
+              credentialIssueDate: "2022-12-10"
+              credentialExpirationDate: "2027-12-10"
+              credentialIndefiniteIndicator: false
+              cardTypeCode: "1"
+              realIdConformantCode: true
+              driverLicenseNonCommercialStatusCode: "LIC"
+              person:
+                personName:
+                  surName: "Renee"
+                  middleName: "Michael"
+                  givenName: "Andre"
+                  suffixCode: "Jr"
+                birthDate: "1980-12-01"
+                eyeColorCode: "BRO"
+                height: 504
+                weight: 150
+                sexCode: "1"
+                address:
+                  line1: "3300 Acorn Street"
+                  line2: "Apartment 321"
+                  city: "Austin"
+                  stateCode: "TX"
+                  postalCode: "78750"
+              personDigitalImage: ""
+
+      responses:
+        "200":
+          description: Verification completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DldvResponse"
+              example:
+                networkControl:
+                  transactionLocator: "0ba805dd-5658-4cbc-b5c9-d7a0c6e9dca8"
+                  messageOriginator: "ABC"
+                  messageDestination: "TX"
+                  billingCategory: "Online"
+                exceptions: []
+                results:
+                  - matchType: "PersonDigitalImageMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "DlnMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "CredentialIssueDateMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "CredentialExpirationDateMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "CredentialIndefiniteIndicatorMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "CardTypeCodeMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+                  - matchType: "RealIdConformantCodeMatch"
+                    matchVersion: "3.0.0"
+                    result: "Match"
+
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+components:
+  schemas:
+    NetworkControl:
+      type: object
+      required:
+        - transactionLocator
+        - messageOriginator
+        - messageDestination
+        - billingCategory
+      properties:
+        transactionLocator:
+          type: string
+          format: uuid
+          example: "0ba805dd-5658-4cbc-b5c9-d7a0c6e9dca8"
+
+        messageOriginator:
+          type: string
+          example: "ABC"
+
+        messageDestination:
+          type: string
+          example: "TX"
+
+        billingCategory:
+          type: string
+          example: "Online"
+
+    PersonName:
+      type: object
+      properties:
+        surName:
+          type: string
+          example: "Renee"
+
+        middleName:
+          type: string
+          example: "Michael"
+
+        givenName:
+          type: string
+          example: "Andre"
+
+        suffixCode:
+          type: string
+          example: "Jr"
+
+    Address:
+      type: object
+      properties:
+        line1:
+          type: string
+          example: "3300 Acorn Street"
+
+        line2:
+          type: string
+          example: "Apartment 321"
+
+        city:
+          type: string
+          example: "Austin"
+
+        stateCode:
+          type: string
+          minLength: 2
+          maxLength: 2
+          example: "TX"
+
+        postalCode:
+          type: string
+          example: "78750"
+
+    Person:
+      type: object
+      properties:
+        personName:
+          $ref: "#/components/schemas/PersonName"
+
+        birthDate:
+          type: string
+          format: date
+          example: "1980-12-01"
+
+        eyeColorCode:
+          type: string
+          example: "BRO"
+
+        height:
+          type: integer
+          example: 504
+
+        weight:
+          type: integer
+          example: 150
+
+        sexCode:
+          type: string
+          example: "1"
+
+        address:
+          $ref: "#/components/schemas/Address"
+
+    DldvRequest:
+      type: object
+      required:
+        - networkControl
+        - dln
+        - credentialIssueDate
+        - credentialExpirationDate
+        - credentialIndefiniteIndicator
+        - cardTypeCode
+        - realIdConformantCode
+        - person
+      properties:
+        networkControl:
+          $ref: "#/components/schemas/NetworkControl"
+
+        dln:
+          type: string
+          description: Driver license number
+          example: "12345678"
+
+        credentialIssueDate:
+          type: string
+          format: date
+          example: "2022-12-10"
+
+        credentialExpirationDate:
+          type: string
+          format: date
+          example: "2027-12-10"
+
+        credentialIndefiniteIndicator:
+          type: boolean
+          example: false
+
+        cardTypeCode:
+          type: string
+          example: "1"
+
+        realIdConformantCode:
+          type: boolean
+          example: true
+
+        driverLicenseNonCommercialStatusCode:
+          type: string
+          example: "LIC"
+
+        person:
+          $ref: "#/components/schemas/Person"
+
+        personDigitalImage:
+          type: string
+          description: >
+            Digital image data. This may contain a Base64-encoded
+            representation of the person's image.
+          example: ""
+
+    MatchResult:
+      type: object
+      required:
+        - matchType
+        - matchVersion
+        - result
+      properties:
+        matchType:
+          type: string
+          example: "DlnMatch"
+
+        matchVersion:
+          type: string
+          example: "3.0.0"
+
+        result:
+          type: string
+          example: "Match"
+          enum:
+            - Match
+            - NoMatch
+
+    Exception:
+      type: object
+      properties:
+        code:
+          type: string
+          example: "INVALID_REQUEST"
+
+        message:
+          type: string
+          example: "Invalid request data"
+
+    DldvResponse:
+      type: object
+      required:
+        - networkControl
+        - exceptions
+        - results
+      properties:
+        networkControl:
+          $ref: "#/components/schemas/NetworkControl"
+
+        exceptions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Exception"
+
+        results:
+          type: array
+          items:
+            $ref: "#/components/schemas/MatchResult"
+
+    ErrorResponse:
+      type: object
+      properties:
+        exceptions:
+          type: array
+          items:
+            $ref: "#/components/schemas/Exception"
