@@ -1,3 +1,6 @@
+ChatGPT said:
+Sure — to support both HTTP and HTTPS, define both server URLs in the servers section. Here is your updated YAML:
+
 openapi: 3.0.3
 
 info:
@@ -6,8 +9,10 @@ info:
   version: 3.0.0
 
 servers:
-  - url: https://api.example.com
-    description: API Server
+  - url: https://live.virtualandemo.com
+    description: API Server (HTTPS)
+  - url: http://live.virtualandemo.com
+    description: API Server (HTTP)
 
 paths:
   /dldv/verify:
@@ -74,27 +79,21 @@ paths:
                   - matchType: "PersonDigitalImageMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "DlnMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "CredentialIssueDateMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "CredentialExpirationDateMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "CredentialIndefiniteIndicatorMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "CardTypeCodeMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
-
                   - matchType: "RealIdConformantCodeMatch"
                     matchVersion: "3.0.0"
                     result: "Match"
@@ -127,15 +126,12 @@ components:
           type: string
           format: uuid
           example: "0ba805dd-5658-4cbc-b5c9-d7a0c6e9dca8"
-
         messageOriginator:
           type: string
           example: "ABC"
-
         messageDestination:
           type: string
           example: "TX"
-
         billingCategory:
           type: string
           example: "Online"
@@ -146,15 +142,12 @@ components:
         surName:
           type: string
           example: "Renee"
-
         middleName:
           type: string
           example: "Michael"
-
         givenName:
           type: string
           example: "Andre"
-
         suffixCode:
           type: string
           example: "Jr"
@@ -165,21 +158,17 @@ components:
         line1:
           type: string
           example: "3300 Acorn Street"
-
         line2:
           type: string
           example: "Apartment 321"
-
         city:
           type: string
           example: "Austin"
-
         stateCode:
           type: string
           minLength: 2
           maxLength: 2
           example: "TX"
-
         postalCode:
           type: string
           example: "78750"
@@ -189,28 +178,22 @@ components:
       properties:
         personName:
           $ref: "#/components/schemas/PersonName"
-
         birthDate:
           type: string
           format: date
           example: "1980-12-01"
-
         eyeColorCode:
           type: string
           example: "BRO"
-
         height:
           type: integer
           example: 504
-
         weight:
           type: integer
           example: 150
-
         sexCode:
           type: string
           example: "1"
-
         address:
           $ref: "#/components/schemas/Address"
 
@@ -228,41 +211,32 @@ components:
       properties:
         networkControl:
           $ref: "#/components/schemas/NetworkControl"
-
         dln:
           type: string
           description: Driver license number
           example: "12345678"
-
         credentialIssueDate:
           type: string
           format: date
           example: "2022-12-10"
-
         credentialExpirationDate:
           type: string
           format: date
           example: "2027-12-10"
-
         credentialIndefiniteIndicator:
           type: boolean
           example: false
-
         cardTypeCode:
           type: string
           example: "1"
-
         realIdConformantCode:
           type: boolean
           example: true
-
         driverLicenseNonCommercialStatusCode:
           type: string
           example: "LIC"
-
         person:
           $ref: "#/components/schemas/Person"
-
         personDigitalImage:
           type: string
           description: >
@@ -280,11 +254,9 @@ components:
         matchType:
           type: string
           example: "DlnMatch"
-
         matchVersion:
           type: string
           example: "3.0.0"
-
         result:
           type: string
           example: "Match"
@@ -298,7 +270,6 @@ components:
         code:
           type: string
           example: "INVALID_REQUEST"
-
         message:
           type: string
           example: "Invalid request data"
@@ -312,12 +283,10 @@ components:
       properties:
         networkControl:
           $ref: "#/components/schemas/NetworkControl"
-
         exceptions:
           type: array
           items:
             $ref: "#/components/schemas/Exception"
-
         results:
           type: array
           items:
