@@ -1,6 +1,3 @@
-ChatGPT said:
-Sure — to support both HTTP and HTTPS, define both server URLs in the servers section. Here is your updated YAML:
-
 openapi: 3.0.3
 
 info:
